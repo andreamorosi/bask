@@ -8,12 +8,19 @@ https://andreamorosi.github.io/baskcss/
 ## Table of contents
 
 [Getting started](#getting-started)
+
 [Prerequisities](#prerequisities)
+
 [Installing](#installing)
+
 [Documentation](#documentation)
+
 [Built with](#built-with)
+
 [Browser support](#browser-support)
+
 [Copyright and license](#copyright-and-license)
+
 [TODOs](#todos)
 
 
@@ -57,6 +64,8 @@ Bask focuses mostly on the latest versions of Chrome, Firefox, Edge and Safari. 
 [ ] better README, with some docs (gotta make a proper docs page however)
 
 [ ] docs page
+
+[ ] package
 
 [ ] start thinking about Bask UI Toolkit (separate repo with components and some vanilla JS)
 

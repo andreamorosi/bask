@@ -6,6 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bask - CSS Framework Documentation</title>
   <link rel="stylesheet" href="build/style.min.css">
+  <style>
+    .table__row {
+      display: flex;
+      border: 1px solid #f64a00;
+      border-bottom: 0;
+    }
+    .table__row:last-child {
+      border-bottom: 1px solid #f64a00;
+    }
+    .table__row:nth-child(2) {
+      border-top: 0;
+    }
+    .table__row.table__row-heading {
+      font-size: 1.2em;
+      border-color: #005AF5;
+      border-bottom: 1px solid #005AF5;
+    }
+    .table__row.table__row-heading > .bg-main {
+      background-color: #005AF5;
+    }
+    .table__row.table__row-heading > .table__cell:first-child:after {
+      border-left: 8px solid #005AF5;
+    }
+    .table__cell:first-child {
+      position: relative;
+      flex: 1;
+    }
+    .table__cell:first-child:after {
+      content: "";
+      position: absolute;
+      border-top: 8px solid transparent;
+      border-left: 8px solid #f64a00;
+      border-bottom: 8px solid transparent;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .table__cell {
+      flex: 1;
+      padding: 16px;
+    }
+    .sider {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      border-right: 6px solid #005AF5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 40px;
+    }
+    .sider__item {
+      cursor: pointer;
+    }
+    .sider__item:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 767px) {
+      .table.w-60 {
+        width: 100%;
+      }
+      .sider {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -13,17 +82,19 @@
   <main role="main" class="is-docs">
 
     <aside id="docs-side" class="sider">
-      summary wip
+      <div id="sider-1" class="sider__item text text-l">Variables</div>
+      <div id="sider-2" class="sider__item text text-l">Utilities</div>
+      <div id="sider-3" class="sider__item text text-l">Typography</div>
     </aside>
 
-    <section id="docs-1" class="docs__1">
+    <section id="docs-1" class="docs__1 mar-b-4 pad-t-4 pad-b-4">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-9 col-md-offset-3">
-            <h1 class="title title-1">
+            <h1 class="title title-1 mar-b-4">
               Bask - CSS Framework
             </h1>
-            <h2 class="title title-2">Documentation and demo</h2>
+            <h2 class="title title-2 mar-b-2"><em>[WIP]</em> Documentation and demo</h2>
             <p class="text text-m">
               Bask is a responsive CSS framework built in SASS, with a focus on consistency and utility classes.
             </p>
@@ -32,12 +103,12 @@
       </div>
     </section>
 
-    <section id="docs-2" class="docs__2">
+    <section id="docs-2" class="docs__2 mar-b-4">
       <div class="container">
-        <div class="row">
+        <div id="siderend-1" class="row">
           <div class="col-12 col-md-9 col-md-offset-3">
-            <span class="flag mar-t-4">assets/css/core/_variables.scss</span>
-            <h3 class="title title-3 mar-t-1">Variables</h3>
+            <em class="text text-m color-white mar-t-4">assets/css/core/_variables.scss</em>
+            <h3 class="title title-3 mar-b-2">Variables</h3>
             <p class="text text-m">
               Bask uses SASS variables to handle media query breakpoints, colors, fonts, but most importantly 
               the <em>$u</em> variable.
@@ -51,12 +122,12 @@
       </div>
     </section>
 
-    <section id="docs-3" class="docs__3">
+    <section id="docs-3" class="docs__3 mar-b-4">
       <div class="container">
-        <div class="row">
+        <div id="siderend-2" class="row">
           <div class="col-12 col-md-9 col-md-offset-3">
-            <span class="flag mar-t-4">assets/css/core/_utils.scss</span>
-            <h3 class="title title-3 mar-t-1">Utilities</h3>
+            <em class="text text-m color-white mar-t-4">assets/css/core/_utils.scss</em>
+            <h3 class="title title-3 mar-b-2">Utilities</h3>
             <h4 class="title title-4 mar-t-4">• Padding</h4>
             <p class="text text-m">
               <em>.pad</em> is the utility to handle the padding. It has 2 parameters, which go directly in the class name.
@@ -374,12 +445,12 @@
     </section>
 
 
-    <section id="docs-4" class="docs__4">
+    <section id="docs-4" class="docs__4 mar-b-4">
       <div class="container">
-        <div class="row">
+        <div id="siderend-3" class="row">
           <div class="col-12 col-md-9 col-md-offset-3">
-            <span class="flag mar-t-4">assets/css/elements/_typography.scss</span>
-            <h3 class="title title-3 mar-t-1">Typography</h3>
+            <em class="text text-m color-white mar-t-4">assets/css/elements/_typography.scss</em>
+            <h3 class="title title-3 mar-b-2">Typography</h3>
             <p class="text text-m">
               Bask's typography file contains both some default style for typography, 
               such as headings, some classes to manipulate text and a few utility classes (text oriented).
@@ -547,7 +618,13 @@
     </section>
 
   </main>
-
+<script>
+  for (var i = 0; i < document.querySelectorAll('.sider__item').length; i++) {
+  document.querySelectorAll('.sider__item')[i].addEventListener('click', function () {
+    document.querySelector('#siderend-'+this.id.split('sider-')[1]).scrollIntoView({behavior: 'smooth'})
+  })
+}
+</script>
 </body>
 
 </html>
