@@ -1,6 +1,6 @@
 # Bask - CSS Framework
 
-🔥 Bask is a responsive CSS framework built in SASS, with a focus on consistency and utility classes.
+Bask is a responsive CSS framework built in SASS, with a focus on consistency and utility classes.
 
 
 ## Table of contents
@@ -53,10 +53,17 @@ Bask focuses mostly on the latest versions of Chrome, Firefox, Edge and Safari. 
 ## TODOs
 
 [ ] better README, with some docs (gotta make a proper docs page however)
+
 [ ] docs page
+
 [ ] start thinking about Bask UI Toolkit (separate repo with components and some vanilla JS)
+
 [ ] refactor the grid (flexbox)
+
 [ ] work on the CSS grid mixin
+
 [ ] rethink and build some CSS elements, such as the card, basic headers, accordion (give basic JS on docs)
+
 [ ] form and form elements (WIP, needs a bit of refactor)
+
 [ ] check the webpack config file, maybe use something else

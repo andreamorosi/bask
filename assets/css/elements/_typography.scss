@@ -105,22 +105,22 @@
 
 //headings
 h1 {
-  @include text(55, 1.2, 700, main);
+  @extend .title-1;
 }
 h2 {
-  @include text(40, 1.2, 700, main);
+  @extend .title-2;
 }
 h3 {
-  @include text(26, 1.2, 700, off);
+  @extend .title-3;
 }
 h4 {
-  @include text(20, 1.2, 500, main);
+  @extend .title-4;
 }
 h5 {
-  @include text(20, 1.2, 400, main);
+  @extend .title-5;
 }
 h6 {
-  @include text(14, 1.2, 500, main);
+  @extend .title-6;
 }//end of headings
 
 //others
