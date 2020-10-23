@@ -1,0 +1,47 @@
+// Colors
+$black:     #1C1C1C;
+$white:     #FFF;
+$grey:      #efe8d8;
+$main:      #f64a00;
+$alt:       #00F5ED;
+$off:       #005AF5;
+
+// COLORS TEST
+$aux:       #ee5214;
+$aux1:      #f64a00; //this one maybe, complementaries: #00F5ED && #005AF5, check neon also
+$almostaux: #e75152;
+$softer:    #e57066;
+$idk:       #ef3e4a;
+$orangered: #e54b4b;
+$almost:    #fc3c2d;
+$celeste:   #b7e3e4;
+$neon:      #77eedf;
+$fluo:      #b1fdeb;
+$smoke:     #efe8d8;
+$green:     #75ffc0;
+//end of COLORS TEST
+
+
+// Media Queries
+$mobileSm:      400px;
+$mobile:        767px;
+$tablet:        992px;
+$tabletLg:      1200px;
+$desktop:       1400px;
+$desktopLg:     1600px;
+
+// Motion
+$motion:        cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+// Font families
+$font-main: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-off: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+// Various
+$u:          8px;
+$directions: (
+  t:  top,
+  r:  right,
+  b:  bottom,
+  l:  left
+);

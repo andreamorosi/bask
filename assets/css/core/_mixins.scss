@@ -1,0 +1,161 @@
+// Mixin for generating the core font rules 
+// [font-size, line-height, font-weight, font-family]
+@mixin text($fontSize, $lineHeight, $fontWeight, $fontType) {
+  @if $fontType=="main" {
+    font-family: $font-main;
+  }
+
+  @if $fontType=="off" {
+    font-family: $font-off;
+  }
+
+  font-size: $fontSize+px;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+// Mixin for generating the max-width container
+@mixin maxwidth {
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1200px;
+  }
+
+  margin: 0 auto;
+  padding: 0 $u*2;
+}
+
+// [WIP]
+@mixin gridOBSOLETE {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(100px, 1fr));
+  grid-template-rows: max-content;
+}
+
+// Mixin for generating titles, using text mixin aswell
+@mixin title {
+  @include text(16, 1.2, 700, main);
+  color: inherit;
+  margin: 0;
+}
+
+// [WIP] Grid mixin
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  @supports (grid-area: auto) {
+    display: grid;
+    grid-gap: $u*2;
+  }
+}
+
+
+// [WIP] Grid mixin for generating grid systems
+@mixin gridAuto {
+  margin-left: -$u*2;
+
+  >* {
+    margin-bottom: $u*2;
+    margin-left: $u*2;
+  }
+
+  @media (min-width: 320px) {
+    >* {
+      width: calc((99% / #{2}) - #{$u*2});
+      flex: 0 0 calc((99% / #{2}) - #{$u*2});
+    }
+  }
+
+  @media (min-width: 768px) {
+    >* {
+      width: calc((99% / #{3}) - #{$u*2});
+      flex: 0 0 calc((99% / #{3}) - #{$u*2});
+    }
+  }
+
+  @supports (grid-area: auto) {
+    //grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-left: 0;
+
+    >* {
+      width: auto;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Mixin to generate padding using the $u variable
+@mixin padding ($top, $right, $bottom, $left) {
+  padding: ($u * $top) ($u * $right) ($u * $bottom) ($u * $left);
+}
+
+// Mixin to generate margin using the $u variable
+@mixin margin ($top, $right, $bottom, $left) {
+  margin: ($u * $top) ($u * $right) ($u * $bottom) ($u * $left);
+}
+
+// Mixin to generate single padding rules, from 0 to 20
+// Example: pad-t-4 === padding-top: $u*4
+// Mixin used in _utils.scss
+@mixin pad-generator {
+  @each $tag, $direction in $directions {
+    &-#{$tag} {
+      @for $i from 0 through 20 {
+        &-#{$i} {
+          padding-#{$direction}: ($u * $i);
+        }
+      }
+    }
+  }
+}
+
+// Mixin to generate single margin rules, from 0 to 20
+// Example: mar-r-4 === margin-right: $u*4
+// Mixin used in _utils.scss
+@mixin mar-generator {
+  @each $tag, $direction in $directions {
+    &-#{$tag} {
+      @for $i from 0 through 20 {
+        &-#{$i} {
+          margin-#{$direction}: ($u * $i);
+        }
+      }
+    }
+  }
+}
+
+// Mixin to generate width sizes, from 0 to 10
+// Example: w-40 === width: 40%
+// Mixin used in _utils.scss
+@mixin width-generator {
+  @for $i from 0 through 10 {
+    &-#{$i * 10} {
+      width: ($i * 10%);
+    }
+  }
+}
+
+// Mixin to generate height sizes, from 0 to 10
+// Example: w-40 === height: 40%
+// Mixin used in _utils.scss
+@mixin height-generator {
+  @for $i from 0 through 10 {
+    &-#{$i * 10} {
+      height: ($i * 10%);
+    }
+  }
+}

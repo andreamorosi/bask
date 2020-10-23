@@ -1,0 +1,40 @@
+{
+  "name": "bask-css",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "Andrea Morosi",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "autoprefixer": "^9.6.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.4.1",
+    "extract-loader": "^3.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "run-sequence": "^2.2.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^2.3.1s",
+    "uglify-js": "^3.6.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "core-js": "3"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:prod": "NODE_ENV=production webpack --config webpack.config.js --display-error-details -p ",
+    "build:watch": "webpack --config webpack.config.js --watch=true"
+  },
+  "dependencies": {
+    
+  }
+}

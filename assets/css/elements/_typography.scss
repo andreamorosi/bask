@@ -1,0 +1,134 @@
+//title
+.title {
+  @include title;
+
+  //title sizes
+  &-1 {
+    @include text(54, 1.1, 700, null);
+  }
+  &-2 {
+    @include text(44, 1, 700, null);
+  }
+  &-3 {
+    @include text(30, 1.2, 700, null);
+  }
+  &-4 {
+    @include text(20, 1.5, 500, null);
+    margin: 0 0 $u*2;
+  }
+  &-5 {
+    @include text(20, 1.2, 400, null);
+    margin: 0 0 $u*2;
+  }
+  &-6 {
+    @include text(14, 1.2, 400, null);
+    margin: 0 0 $u*2;
+  }
+}//end of title
+
+//font-family
+.font {
+  &-main {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  &-off {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}//end of font-family
+
+//text
+.text {
+  @include text(16, 1.8, 400, main);
+  color: inherit;
+  margin: 0 0 $u*2;
+
+  //text sizes
+  &-xl {
+    @include text(24, 1.5, 400, main);
+  }
+  &-l {
+    @include text(20, 1.5, 400, main);
+  }
+  &-m {
+    @include text(16, 1.8, 400, main);
+  }
+  &-s {
+    @include text(12, 1.5, 400, main);
+  }
+  &-xs {
+    @include text(9, 1.3, 400, main);
+  }
+
+  //text utils
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+
+  &.font-off {
+    @extend .font-off;
+  }
+}//end of text
+
+//font-weight
+.font-w {
+  &-xl {
+    font-weight: 900;
+  }
+
+  &-l {
+    font-weight: 700;
+  }
+
+  &-m {
+    font-weight: 500;
+  }
+
+  &-s {
+    font-weight: 400;
+  }
+  &-xs {
+    font-weight: 300;
+  }
+}//end of font-weight
+
+//headings
+h1 {
+  @include text(55, 1.2, 700, main);
+}
+h2 {
+  @include text(40, 1.2, 700, main);
+}
+h3 {
+  @include text(26, 1.2, 700, off);
+}
+h4 {
+  @include text(20, 1.2, 500, main);
+}
+h5 {
+  @include text(20, 1.2, 400, main);
+}
+h6 {
+  @include text(14, 1.2, 500, main);
+}//end of headings
+
+//others
+em {
+  font-style: initial;
+  background-color: $main;
+  color: $white;
+  margin: 0 0 $u*2;
+  @include padding(0,0.5,0,0.5);
+}
+//end of others
