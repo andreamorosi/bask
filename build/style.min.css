@@ -1677,6 +1677,10 @@ input:focus {
     justify-content: space-around; }
   .d-f-x-evenly {
     justify-content: space-evenly; }
+  .d-f-col {
+    flex-direction: column; }
+  .d-f-row {
+    flex-direction: row; }
 
 .d-b {
   display: block; }

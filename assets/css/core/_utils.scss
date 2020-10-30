@@ -55,6 +55,12 @@
         justify-content: space-evenly;
       }
     }
+    &-col {
+      flex-direction: column;
+    }
+    &-row {
+      flex-direction: row;
+    }
   }//end of Display flex
 
   &-b {
