@@ -819,10 +819,10 @@ a {
     margin: 0 0 16px; }
 
 .font-main {
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .font-off, .text.font-off {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .text {
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
