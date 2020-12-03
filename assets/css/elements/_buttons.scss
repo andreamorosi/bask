@@ -1,11 +1,12 @@
 //button
 .btn {
   display: inline-block;
+  @extend .text-m;
+  font-family: $font-main;
   position: relative;
   cursor: pointer;
   background: $main;
   color: $white;
-  @include text(14, 1.2, 500, main);
   text-align: center;
   vertical-align: middle;
   border: 1px solid $main;
@@ -51,20 +52,26 @@
   }//end of .btn styles
   
   // .btn sizes
-  &-l {
-    @include text(20, 1.2, 500, main);
-    @include padding(2.5,5,2.5,5);
+  &.btn {
+    &-xl {
+      @extend .text-xl;
+      @include padding(2.5,5,2.5,5);
+    }
+    &-l {
+      @extend .text-l;
+      @include padding(2.5,5,2.5,5);
+    }
+    &-m {
+      @extend .text-m;
+      @include padding(2,4,2,4);
+    }
+    &-s {
+      @extend .text-s;
+      @include padding(2,4,2,4);
+    }
+    &-xs {
+      @extend .text-xs;
+      @include padding(1.5,3,1.5,3);
+    }//end of .btn sizes
   }
-  &-m {
-    @include text(16, 1.2, 500, main);
-    @include padding(2,4,2,4);
-  }
-  &-s {
-    @include text(14, 1.2, 500, main);
-    @include padding(2,4,2,4);
-  }
-  &-xs {
-    @include text(12, 1.2, 500, main);
-    @include padding(1.5,3,1.5,3);
-  }//end of .btn sizes
 }//end of button

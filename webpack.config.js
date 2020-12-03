@@ -101,7 +101,7 @@ const legacyConfig = {
 const moduleConfig = {
   mode: "development",
   output: {
-    filename: "[name].bundle.mjs",
+    filename: "[name].bundle.js",
     path: path.resolve("./build")
   },
   entry,
