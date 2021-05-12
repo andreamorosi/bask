@@ -34,7 +34,5 @@
     "build:prod": "NODE_ENV=production webpack --config webpack.config.js --display-error-details -p ",
     "build:watch": "webpack --config webpack.config.js --watch=true"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }
