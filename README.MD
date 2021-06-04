@@ -2,7 +2,7 @@
 
 Bask is a responsive CSS framework built in SASS, with a focus on consistency and utility classes.
 
-https://andreamorosi.github.io/baskcss/
+https://andreamorosi.github.io/bask/
 
 
 ## Table of contents
@@ -41,7 +41,7 @@ https://andreamorosi.github.io/baskcss/
 
 ### Documentation
 
-https://andreamorosi.github.io/baskcss/
+https://andreamorosi.github.io/bask/
 
 
 ## Built bith
