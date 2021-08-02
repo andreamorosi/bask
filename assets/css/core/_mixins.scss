@@ -37,11 +37,29 @@
   padding: 0 $u*2;
 }
 
-// [WIP]
-@mixin gridOBSOLETE {
+// Grid generator
+@mixin gridgen {
   display: grid;
-  grid-template-columns: repeat(12, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, [col-start] 1fr);
   grid-template-rows: max-content;
+  //grid-template-rows: minmax(100px,auto);
+  gap: $u*3;
+  margin: 0 auto;
+  padding-left: $u*2;
+  padding-right: $u*2;
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
 }
 
 // Mixin for generating titles, using text mixin aswell
