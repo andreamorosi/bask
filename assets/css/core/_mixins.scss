@@ -181,9 +181,17 @@
 
 // Mixin to generate a spacer, an util to add
 // vertical spacing to a web page's section.
-@mixin spacer($multiplier) {
-  padding: ($multiplier*$u*2.5) 0;
+@mixin spacer($multiplier-1,$multiplier-2) {
+  padding: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
   @media (min-width: 768px) {
-    padding: ($multiplier*$u*5) 0;
+    padding: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
   }
+}
+
+// Mixin for responsive fill images
+@mixin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
