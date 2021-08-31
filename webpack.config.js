@@ -19,7 +19,7 @@ const entry = {
 
 const plugins = [
   new MiniCssExtractPlugin({
-    filename: "style.min.css"
+    filename: "brisa.min.css"
   }),
 ];
 

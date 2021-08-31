@@ -9,10 +9,6 @@ https://andreamorosi.github.io/bask/
 
 [Getting started](#getting-started)
 
-[Prerequisities](#prerequisities)
-
-[Installing](#installing)
-
 [Documentation](#documentation)
 
 [Built with](#built-with)
@@ -26,32 +22,25 @@ https://andreamorosi.github.io/bask/
 
 ## Getting started
 
-[WIP]
+Bask is a ready to use CSS framework: to use just take the compiled css file (brisa.min.css) from the build folder and include it in your project. 
 
+However, if you wanna tinker with it, edit some properties and such just dig into the assets/css folder and start experimenting: the main entry point is the main.scss file, where all other SASS files are imported.
 
-### Prerequisities
-
-[WIP]
-
-
-### Installing
-
-[WIP]
-
+One of the most important SASS files is the _variables.scss, where the $u is located: this is my unit size (default 8px) which I use pretty much everywhere in Bask to keep everything in check, such as spacing and elements' sizes.
 
 ### Documentation
 
 https://andreamorosi.github.io/bask/
 
 
-## Built bith
+## Built with
 
-[WIP]
+SASS & Webpack
 
 
 ## Copyright and license
 
-Code copyright 2020 Andrea Morosi. MIT
+Code copyright 2021 Andrea Morosi. MIT
 
 
 ## Browser support
@@ -65,16 +54,10 @@ Bask focuses mostly on the latest versions of Chrome, Firefox, Edge and Safari. 
 
 [ ] docs page
 
-[ ] package
-
-[ ] start thinking about Bask UI Toolkit (separate repo with components and some vanilla JS)
-
 [ ] refactor the grid (flexbox)
 
-[ ] work on the CSS grid mixin
+[x] work on the CSS grid mixin
 
 [ ] rethink and build some CSS elements, such as the card, basic headers, accordion (give basic JS on docs)
 
 [ ] form and form elements (WIP, needs a bit of refactor)
-
-[ ] check the webpack config file, maybe use something else
