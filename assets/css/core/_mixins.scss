@@ -10,7 +10,7 @@
   }
 
   font-size: $fontSize+px;
-  font-size: clamp(($fontSize*0.95)+px,($fontSize/4)+vw,($fontSize*1.05)+px);
+  font-size: clamp(#{($fontSize*0.95)}px,calc(-0.8750rem + (#{$fontSize}px*1.27777)),#{($fontSize*1.05)}px);
   line-height: $lineHeight;
   font-weight: $fontWeight;
 }
