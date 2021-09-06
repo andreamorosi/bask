@@ -1042,6 +1042,7 @@ input:focus {
 .form__checkbox {
   flex: 1 1 16px;
   max-width: 16px;
+  min-width: 16px;
   display: inline-block;
   width: 16px;
   height: 16px;

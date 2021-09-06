@@ -84,6 +84,7 @@ input {
   &__checkbox {
     flex: 1 1 $u*2;
     max-width: $u*2;
+    min-width: $u*2;
     display: inline-block;
     width: $u*2;
     height: $u*2;
