@@ -69,54 +69,6 @@
   margin: 0;
 }
 
-// [WIP] Grid mixin
-@mixin grid {
-  display: flex;
-  flex-wrap: wrap;
-
-  @supports (grid-area: auto) {
-    display: grid;
-    grid-gap: $u*2;
-  }
-}
-
-
-// [WIP] Grid mixin for generating grid systems
-@mixin gridAuto {
-  margin-left: -$u*2;
-
-  >* {
-    margin-bottom: $u*2;
-    margin-left: $u*2;
-  }
-
-  @media (min-width: 320px) {
-    >* {
-      width: calc((99% / #{2}) - #{$u*2});
-      flex: 0 0 calc((99% / #{2}) - #{$u*2});
-    }
-  }
-
-  @media (min-width: 768px) {
-    >* {
-      width: calc((99% / #{3}) - #{$u*2});
-      flex: 0 0 calc((99% / #{3}) - #{$u*2});
-    }
-  }
-
-  @supports (grid-area: auto) {
-    //grid-template-columns: repeat(12, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin-left: 0;
-
-    >* {
-      width: auto;
-      margin-left: 0;
-      margin-bottom: 0;
-    }
-  }
-}
-
 // Mixin to generate padding using the $u variable
 @mixin padding ($top, $right, $bottom, $left) {
   padding: ($u * $top) ($u * $right) ($u * $bottom) ($u * $left);
