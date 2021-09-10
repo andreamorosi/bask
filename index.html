@@ -4,30 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bask - CSS Framework Documentation</title>
-  <link rel="stylesheet" href="build/style.min.css">
+  <title>Bask - CSS Boilerplate Documentation</title>
+  <link rel="stylesheet" href="build/brisa.min.css">
   <style>
+    body {
+      background-color: #313131;
+      color: whitesmoke;
+    }
     .table__row {
       display: flex;
-      border: 1px solid #f64a00;
+      border: 1px solid #e42c64;
       border-bottom: 0;
     }
     .table__row:last-child {
-      border-bottom: 1px solid #f64a00;
+      border-bottom: 1px solid #e42c64;
     }
     .table__row:nth-child(2) {
       border-top: 0;
     }
     .table__row.table__row-heading {
       font-size: 1.2em;
-      border-color: #005AF5;
-      border-bottom: 1px solid #005AF5;
+      border-color: #6b48ff;
+      border-bottom: 1px solid #6b48ff;
     }
     .table__row.table__row-heading > .bg-main {
-      background-color: #005AF5;
+      background-color: #6b48ff;
     }
     .table__row.table__row-heading > .table__cell:first-child:after {
-      border-left: 8px solid #005AF5;
+      border-left: 8px solid #6b48ff;
     }
     .table__cell:first-child {
       position: relative;
@@ -37,7 +41,7 @@
       content: "";
       position: absolute;
       border-top: 8px solid transparent;
-      border-left: 8px solid #f64a00;
+      border-left: 8px solid #e42c64;
       border-bottom: 8px solid transparent;
       right: -8px;
       top: 50%;
@@ -46,6 +50,7 @@
     .table__cell {
       flex: 1;
       padding: 16px;
+      color: whitesmoke;
     }
     .sider {
       position: fixed;
@@ -53,7 +58,7 @@
       left: 0;
       width: 250px;
       height: 100%;
-      border-right: 6px solid #005AF5;
+      border-right: 6px solid #6b48ff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -67,7 +72,7 @@
       text-decoration: underline;
     }
     @media (max-width: 767px) {
-      .table.w-60 {
+      .table.w-80 {
         width: 100%;
       }
       .sider {
@@ -81,35 +86,29 @@
 
   <main role="main" class="is-docs">
 
-    <aside id="docs-side" class="sider">
-      <div id="sider-1" class="sider__item text text-l">Variables</div>
-      <div id="sider-2" class="sider__item text text-l">Utilities</div>
-      <div id="sider-3" class="sider__item text text-l">Typography</div>
-    </aside>
-
-    <section id="docs-1" class="docs__1 mar-b-4 pad-t-4 pad-b-4">
+    <section id="docs-1" class="docs__1 mar-b-2 pad-t-2 pad-b-2">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-9 col-md-offset-3">
-            <h1 class="title title-1 mar-b-4">
-              Bask - CSS Framework
+          <div class="col-12 col-md-6 col-md-offset-3">
+            <h1 class="title title-3 mar-b-2">
+              Bask - CSS Boilerplate
             </h1>
-            <h2 class="title title-2 mar-b-2"><em>[WIP]</em> Documentation and demo</h2>
-            <p class="text text-m">
-              Bask is a responsive CSS framework built in SASS, with a focus on consistency and utility classes.
+            <h2 class="title title-4 mar-b-2">Documentation and demo</h2>
+            <p class="text text-s">
+              Bask is a responsive CSS boilerplate built in SASS, with a focus on consistency and utility classes.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="docs-2" class="docs__2 mar-b-4">
+    <section id="docs-2" class="docs__2 mar-b-2">
       <div class="container">
         <div id="siderend-1" class="row">
-          <div class="col-12 col-md-9 col-md-offset-3">
-            <em class="text text-m color-white mar-t-4">assets/css/core/_variables.scss</em>
-            <h3 class="title title-3 mar-b-2">Variables</h3>
-            <p class="text text-m">
+          <div class="col-12 col-md-6 col-md-offset-3">
+            <em class="text text-s color-white mar-t-4">assets/css/core/_variables.scss</em>
+            <h3 class="title title-5 mar-b-1">Variables</h3>
+            <p class="text text-s">
               Bask uses SASS variables to handle media query breakpoints, colors, fonts, but most importantly 
               the <em>$u</em> variable.
               <br><br>
@@ -122,20 +121,20 @@
       </div>
     </section>
 
-    <section id="docs-3" class="docs__3 mar-b-4">
+    <section id="docs-3" class="docs__3 mar-b-2">
       <div class="container">
         <div id="siderend-2" class="row">
-          <div class="col-12 col-md-9 col-md-offset-3">
-            <em class="text text-m color-white mar-t-4">assets/css/core/_utils.scss</em>
-            <h3 class="title title-3 mar-b-2">Utilities</h3>
-            <h4 class="title title-4 mar-t-4">• Padding</h4>
-            <p class="text text-m">
+          <div class="col-12 col-md-6 col-md-offset-3">
+            <em class="text text-s color-white mar-t-4">assets/css/core/_utils.scss</em>
+            <h3 class="title title-5 mar-b-1">Utilities</h3>
+            <h4 class="title title-4 mar-t-2">• Padding</h4>
+            <p class="text text-s">
               <em>.pad</em> is the utility to handle the padding. It has 2 parameters, which go directly in the class name.
               <br>
               <em>.pad-{direction}-{number}</em>, where <b>{direction}</b> has to be a value from 
               the <b>$directions</b> map (t = top,r = right,b = bottom,l = left), and <b>{number}</b> is our multiplier for the $u variable
             </p>
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -149,16 +148,16 @@
                 </div>
               </div>
             </div>
-            <p class="text text-m">
+            <p class="text text-s">
               <b>{r}</b> means right, <b>{3}</b> is ($u * 3), where $u = 8px.
             </p>
-            <h4 class="title title-4 mar-t-4">• Margin</h4>
-            <p class="text text-m">
+            <h4 class="title title-4 mar-t-2">• Margin</h4>
+            <p class="text text-s">
               <em>.mar</em> .mar is the utility to handle the margin, which is exactly like the padding utility.
             </p>
 
             
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -172,16 +171,16 @@
                 </div>
               </div>
             </div>
-            <p class="text text-m">
+            <p class="text text-s">
               <b>{b}</b> means bottom, <b>{7}</b> is ($u * 7), where $u = 8px.
             </p>
 
             
-            <h4 class="title title-4 mar-t-4">• Display</h4>
-            <p class="text text-m">
+            <h4 class="title title-4 mar-t-2">• Display</h4>
+            <p class="text text-s">
               <em>.d</em> is the display utility, which requires additional modifiers:
             </p>
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -219,14 +218,14 @@
                 </div>
               </div>
             </div>
-            <p class="text text-m mar-t-2">
+            <p class="text text-s mar-t-2">
               The display flex utility class has a few modifiers to handle the flexbox.
               <br><br>
               <em>.d-f-y</em> stands for the Y axis of the flexbox (container), it needs 1 more modifier: 
             </p>
 
             
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -257,11 +256,11 @@
               </div>
             </div>
 
-            <p class="text text-m mar-t-4">
+            <p class="text text-s mar-t-4">
               <em>.d-f-x</em> handles the X axis, requiring 1 additional modifier:
             </p>
             
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -318,11 +317,11 @@
             
 
             
-            <h4 class="title title-4 mar-t-4">• Color</h4>
-            <p class="text text-m">
+            <h4 class="title title-4 mar-t-2">• Color</h4>
+            <p class="text text-s">
               <em>.color</em> is the utility for colors, using the color variables in the _variables.scss file.
             </p>
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -379,11 +378,11 @@
             
             
             
-            <h4 class="title title-4 mar-t-4">• Background color</h4>
-            <p class="text text-m">
+            <h4 class="title title-4 mar-t-2">• Background color</h4>
+            <p class="text text-s">
               <em>.bg</em> is the utility for background colors, using the color variables in the _variables.scss file.
             </p>
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">CSS output</div>
@@ -444,25 +443,23 @@
       </div>
     </section>
 
-
-    <section id="docs-4" class="docs__4 mar-b-4">
+    <section id="docs-4" class="docs__4 mar-b-2">
       <div class="container">
         <div id="siderend-3" class="row">
-          <div class="col-12 col-md-9 col-md-offset-3">
-            <em class="text text-m color-white mar-t-4">assets/css/elements/_typography.scss</em>
-            <h3 class="title title-3 mar-b-2">Typography</h3>
-            <p class="text text-m">
+          <div class="col-12 col-md-6 col-md-offset-3">
+            <em class="text text-s color-white mar-t-4">assets/css/elements/_typography.scss</em>
+            <h3 class="title title-5 mar-b-1">Typography</h3>
+            <p class="text text-s">
               Bask's typography file contains both some default style for typography, 
               such as headings, some classes to manipulate text and a few utility classes (text oriented).
             </p>
-
             
-            <h4 class="title title-4 mar-t-4">• Title</h4>
-            <p class="text text-m">
+            <h4 class="title title-4 mar-t-2">• Title</h4>
+            <p class="text text-s">
               <em>.title</em> is the class which states the default title styles, it supports 6 size modifiers:              
             </p>
             
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">Result</div>
@@ -485,10 +482,10 @@
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .title-3
+                  .title-5
                 </div>
                 <div class="table__cell">
-                  <p class="title-3 mar-t-0 mar-b-0">Title 3</p>
+                  <p class="title-5 mar-t-0 mar-b-0">Title 3</p>
                 </div>
               </div>
               <div class="table__row">
@@ -519,13 +516,13 @@
             
 
             
-            <h4 class="title title-4 mar-t-4">• Text</h4>
-            <p class="text text-m">
+            <h4 class="title title-4 mar-t-2">• Text</h4>
+            <p class="text text-s">
               <em>.text</em> is the class which states the default text styles, it supports 6 size modifiers, 
               text centering utils and text transform utils.
             </p>
             
-            <div class="table w-60 text text-m color-black">
+            <div class="table w-80 text text-s color-black">
               <div class="table__row table__row-heading">
                 <div class="table__cell bg-main color-white">Class name</div>
                 <div class="table__cell">Result</div>
@@ -548,10 +545,10 @@
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .text-m
+                  .text-s
                 </div>
                 <div class="table__cell">
-                  <p class="text-m mar-t-0 mar-b-0">Text M</p>
+                  <p class="text-s mar-t-0 mar-b-0">Text M</p>
                 </div>
               </div>
               <div class="table__row">
@@ -572,42 +569,42 @@
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .text-m.text-center
+                  .text-s.text-center
                 </div>
                 <div class="table__cell">
-                  <p class="text-m text-center d-b w-100 mar-t-0 mar-b-0">Text center</p>
+                  <p class="text-s text-center d-b w-100 mar-t-0 mar-b-0">Text center</p>
                 </div>
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .text-m.text-left
+                  .text-s.text-left
                 </div>
                 <div class="table__cell">
-                  <p class="text-m text-left d-b w-100 mar-t-0 mar-b-0">Text left</p>
+                  <p class="text-s text-left d-b w-100 mar-t-0 mar-b-0">Text left</p>
                 </div>
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .text-m.text-right
+                  .text-s.text-right
                 </div>
                 <div class="table__cell">
-                  <p class="text-m text-right d-b w-100 mar-t-0 mar-b-0">Text right</p>
+                  <p class="text-s text-right d-b w-100 mar-t-0 mar-b-0">Text right</p>
                 </div>
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .text-m.text-uppercase
+                  .text-s.text-uppercase
                 </div>
                 <div class="table__cell">
-                  <p class="text-m text-uppercase mar-t-0 mar-b-0">Text uppercase</p>
+                  <p class="text-s text-uppercase mar-t-0 mar-b-0">Text uppercase</p>
                 </div>
               </div>
               <div class="table__row">
                 <div class="table__cell bg-main color-white">
-                  .text-m.text-lowercase
+                  .text-s.text-lowercase
                 </div>
                 <div class="table__cell">
-                  <p class="text-m text-lowercase mar-t-0 mar-b-0">Text lowercase</p>
+                  <p class="text-s text-lowercase mar-t-0 mar-b-0">Text lowercase</p>
                 </div>
               </div>
             </div>
@@ -617,14 +614,26 @@
       </div>
     </section>
 
+    <section id="docs-5" class="docs__4 mar-b-2">
+      <div class="container">
+        <div id="siderend-4" class="row">
+          <div class="col-12 col-md-6 col-md-offset-3">
+            <em class="text text-s color-white mar-t-4">assets/css/core/_mixins.scss</em>
+            <h3 class="title title-5 mar-b-1">Mixins</h3>
+            <p class="text text-s">
+              Most of features are handled by custom mixins, such as font handling (font-size, font-weight, etc), 
+              spacing, grid generation, responsive images, etc.
+              <br>
+              I try to keep all the mixins' code clean and add comments on how they work. I work on them 
+              very often and try to enhance the boilerplate via their usage mostly. 
+            </p>            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-<script>
-  for (var i = 0; i < document.querySelectorAll('.sider__item').length; i++) {
-  document.querySelectorAll('.sider__item')[i].addEventListener('click', function () {
-    document.querySelector('#siderend-'+this.id.split('sider-')[1]).scrollIntoView({behavior: 'smooth'})
-  })
-}
-</script>
 </body>
 
 </html>
