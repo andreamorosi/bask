@@ -1018,6 +1018,27 @@ input:focus {
   .form__input:focus {
     outline: #6b48ff solid 1px;
     outline-offset: -1px; }
+  .form__input--select {
+    color: #1C1C1C;
+    cursor: pointer;
+    display: block; }
+    .form__input--select:focus {
+      color: #1C1C1C; }
+    .form__input--select--outer {
+      position: relative;
+      width: 100%; }
+      .form__input--select--outer:before {
+        content: "";
+        position: absolute;
+        background-image: url(/path/to/chevron);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%) rotate(90deg); }
 
 .form__tarea {
   -webkit-appearance: none;

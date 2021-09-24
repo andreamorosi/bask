@@ -59,6 +59,31 @@ input {
       outline: $off solid 1px;
       outline-offset: -1px;
     }
+    &--select {
+      color: $black;
+      cursor: pointer;
+      display: block;
+      &:focus {
+        color: $black;
+      }
+      &--outer {
+        position: relative;
+        width: 100%;
+        &:before {
+          content: "";
+          position: absolute;
+          background-image: url(/path/to/chevron);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: $u*2;
+          height: $u*2;
+          top: 50%;
+          right: $u*2;
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
+    }
   }
 
   //form__tarea
