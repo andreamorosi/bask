@@ -6,7 +6,7 @@ body {
   background-color: $white;
   color: $black;
   position: relative;
-  @include text(16, 1.8, 400, main);
+  @include text(12, 16, 1.5, 400, main);
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   transition: filter $motion 1s;

@@ -1,6 +1,6 @@
 // Mixin for generating the core font rules 
-// [font-size, line-height, font-weight, font-family]
-@mixin text($fontSize, $lineHeight, $fontWeight, $fontType) {
+// [font-size-min, font-size-max, line-height, font-weight, font-family]
+@mixin text($fontSizeMin, $fontSizeMax, $lineHeight, $fontWeight, $fontType) {
   @if $fontType=="main" {
     font-family: $font-main;
   }
@@ -10,7 +10,8 @@
   }
 
   font-size: $fontSize+px;
-  font-size: clamp(#{($fontSize*0.95)}px,calc(-0.8750rem + (#{$fontSize}px*1.27777)),#{($fontSize*1.05)}px);
+  font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + (#{$fontSizeMax}px*1.27777)),#{($fontSizeMax)}px);
+  //font-size: clamp(26px,calc(-0.8750rem + 3vw),36px);
   line-height: $lineHeight;
   font-weight: $fontWeight;
 }
