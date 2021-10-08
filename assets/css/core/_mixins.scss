@@ -9,7 +9,7 @@
     font-family: $font-off;
   }
 
-  font-size: $fontSize+px;
+  font-size: $fontSizeMin+px;
   font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + (#{$fontSizeMax}px*1.27777)),#{($fontSizeMax)}px);
   //font-size: clamp(26px,calc(-0.8750rem + 3vw),36px);
   line-height: $lineHeight;
@@ -65,7 +65,7 @@
 
 // Mixin for generating titles, using text mixin aswell
 @mixin title {
-  @include text(16, 1.2, 700, main);
+  @include text(12, 16, 1.2, 700, main);
   color: inherit;
   margin: 0;
 }
