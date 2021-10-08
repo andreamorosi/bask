@@ -10,8 +10,24 @@
   }
 
   font-size: $fontSizeMin+px;
-  font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + (#{$fontSizeMax}px*1.27777)),#{($fontSizeMax)}px);
-  //font-size: clamp(26px,calc(-0.8750rem + 3vw),36px);
+  font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 2.25vw),#{($fontSizeMax)}px);
+
+  @if $fontSizeMax > 30 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 3vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax > 40 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 3.5vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax > 50 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 4vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax > 60 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 4.5vw),#{($fontSizeMax)}px);
+  }
+  @if $fontSizeMax > 70 {
+    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 5.5vw),#{($fontSizeMax)}px);
+  }
+
   line-height: $lineHeight;
   font-weight: $fontWeight;
 }
