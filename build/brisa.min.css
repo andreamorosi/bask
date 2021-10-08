@@ -809,6 +809,7 @@ a {
   .title-3, h3 {
     font-size: 20px;
     font-size: clamp(20px, calc(-0.8750rem + 2.25vw), 30px);
+    font-size: clamp(20px, calc(-0.8750rem + 3vw), 30px);
     line-height: 1.2;
     font-weight: 700; }
   .title-4, h4 {
