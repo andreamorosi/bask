@@ -34,7 +34,7 @@ input {
 
   //form__label
   &__label {
-    @include text(14,1.2,500,main);
+    @include text(12, 14,1.2,500,main);
     letter-spacing: 0.1em;
     margin-bottom: $u;
     display: block;
@@ -152,7 +152,7 @@ input {
     //form__checkbox__label
     &__label {
       flex: 1;
-      @include text(9, 1.3, 700, main);
+      @include text(9, 9, 1.3, 700, main);
       letter-spacing: 0.05em;
       cursor: pointer;
     }
