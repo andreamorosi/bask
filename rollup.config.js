@@ -5,7 +5,7 @@ import autoprefixer from 'autoprefixer'
 export default {
   input: './assets/css/main.scss',
   output: {
-    file: './build/index.js',
+    file: './build/bask.min.js',
     format: 'esm'
   },
   plugins: [
