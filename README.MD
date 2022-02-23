@@ -22,7 +22,7 @@ https://andreamorosi.github.io/bask/
 
 ## Getting started
 
-Bask is a ready to use CSS boilerplate: to use just take the compiled css file (brisa.min.css) from the build folder and include it in your project. 
+Bask is a ready to use CSS boilerplate: to use just take the compiled css file (brisa.min.css) from the build folder and include it in your project, or get it from https://raw.githubusercontent.com/andreamorosi/bask/main/build/bask.min.css
 
 However, if you wanna tinker with it, edit some properties and such just dig into the assets/css folder and start experimenting: the main entry point is the main.scss file, where all other SASS files are imported.
 

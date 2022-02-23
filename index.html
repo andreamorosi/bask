@@ -11,27 +11,31 @@
       background-color: whitesmoke;
       color: #313131;
     }
+    body em {
+      background-color: #313131;
+      color: whitesmoke;
+    }
     .table__row {
       display: flex;
-      border: 1px solid #e42c64;
+      border: 1px solid #313131;
       border-bottom: 0;
     }
     .table__row:last-child {
-      border-bottom: 1px solid #e42c64;
+      border-bottom: 1px solid #313131;
     }
     .table__row:nth-child(2) {
       border-top: 0;
     }
     .table__row.table__row-heading {
       font-size: 1.2em;
-      border-color: #6b48ff;
-      border-bottom: 1px solid #6b48ff;
+      border-color: #005eff;
+      border-bottom: 1px solid #005eff;
     }
     .table__row.table__row-heading > .bg-main {
-      background-color: #6b48ff;
+      background-color: #005eff;
     }
     .table__row.table__row-heading > .table__cell:first-child:after {
-      border-left: 8px solid #6b48ff;
+      border-left: 8px solid #005eff;
     }
     .table__cell:first-child {
       position: relative;
@@ -41,7 +45,7 @@
       content: "";
       position: absolute;
       border-top: 8px solid transparent;
-      border-left: 8px solid #e42c64;
+      border-left: 8px solid #313131;
       border-bottom: 8px solid transparent;
       right: -8px;
       top: 50%;
@@ -61,7 +65,7 @@
       left: 0;
       width: 250px;
       height: 100%;
-      border-right: 6px solid #6b48ff;
+      border-right: 6px solid #005eff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -97,8 +101,11 @@
               Bask - CSS Boilerplate
             </h1>
             <h2 class="title title-4 mar-b-2">Documentation and demo</h2>
-            <p class="text text-s">
+            <p class="text text-m">
               Bask is a responsive CSS boilerplate built in SASS, with a focus on consistency and utility classes.
+            </p>
+            <p class="text text-s">
+              <a href="https://raw.githubusercontent.com/andreamorosi/bask/main/build/bask.min.css">Get the CSS</a>
             </p>
           </div>
         </div>
