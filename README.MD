@@ -40,7 +40,7 @@ SASS & Webpack
 
 ## Copyright and license
 
-Code copyright 2021 Andrea Morosi. MIT
+Code copyright 2022 Andrea Morosi. MIT
 
 
 ## Browser support
