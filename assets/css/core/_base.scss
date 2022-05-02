@@ -9,7 +9,7 @@ body {
   @include text(12, 16, 1.5, 400, main);
   min-height: 100vh;
   text-rendering: optimizeLegibility;
-  transition: filter $motion 1s;
+  //transition: filter $motion 1s;
   overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;

@@ -34,20 +34,20 @@
 
 // Mixin for generating the max-width container
 @mixin maxwidth {
-  @media (min-width: 768px) {
-    max-width: 768px;
+  @media (min-width: $mobile) {
+    max-width: $mobile;
   }
 
-  @media (min-width: 1024px) {
-    max-width: 1024px;
+  @media (min-width: $tablet) {
+    max-width: $tablet;
   }
 
-  @media (min-width: 1200px) {
-    max-width: 1200px;
+  @media (min-width: $tabletLg) {
+    max-width: $tabletLg;
   }
 
-  @media (min-width: 1400px) {
-    max-width: 1200px;
+  @media (min-width: $desktop) {
+    max-width: $desktop;
   }
 
   margin: 0 auto;
@@ -64,18 +64,18 @@
   margin: 0 auto;
   padding-left: $u*2;
   padding-right: $u*2;
-  @media (min-width: 768px) {
-    max-width: 768px;
-  }
-  @media (min-width: 1024px) {
-    max-width: 1024px;
+  @media (min-width: $mobile) {
+    max-width: $mobile;
     grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
   }
-  @media (min-width: 1200px) {
-    max-width: 1200px;
+  @media (min-width: $tablet) {
+    max-width: $tablet;
   }
-  @media (min-width: 1400px) {
-    max-width: 1400px;
+  @media (min-width: $tabletLg) {
+    max-width: $tabletLg;
+  }
+  @media (min-width: $desktop) {
+    max-width: $desktop;
   }
 }
 
@@ -152,7 +152,7 @@
 // vertical spacing to a web page's section.
 @mixin spacer($multiplier-1,$multiplier-2) {
   padding: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
-  @media (min-width: 768px) {
+  @media (min-width: $mobile) {
     padding: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
   }
 }
@@ -161,7 +161,7 @@
 // vertical spacing to a web page's section.
 @mixin spacer-margin($multiplier-1,$multiplier-2) {
   margin: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
-  @media (min-width: 768px) {
+  @media (min-width: $mobile) {
     margin: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
   }
 }
