@@ -77,6 +77,14 @@
   @media (min-width: $desktop) {
     max-width: $desktop;
   }
+  & > * {
+    grid-column: span 4;
+    position: relative;
+    z-index: 1;
+    @media (min-width: $mobile) {
+      grid-column: span 12;
+    }
+  }
 }
 
 // Mixin for generating titles, using text mixin aswell
