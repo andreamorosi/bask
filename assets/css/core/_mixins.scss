@@ -34,19 +34,19 @@
 
 // Mixin for generating the max-width container
 @mixin maxwidth {
-  @media (min-width: $mobile) {
+  @media (min-width: #{$mobile + 1px}) {
     max-width: $mobile;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: #{$tablet + 1px}) {
     max-width: $tablet;
   }
 
-  @media (min-width: $tabletLg) {
+  @media (min-width: #{$tabletLg + 1px}) {
     max-width: $tabletLg;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: #{$desktop + 1px}) {
     max-width: $desktop;
   }
 
@@ -64,17 +64,20 @@
   margin: 0 auto;
   padding-left: $u*2;
   padding-right: $u*2;
-  @media (min-width: $mobile) {
+  @media (min-width: #{$mobile + 1px}) {
     max-width: $mobile;
     grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
   }
-  @media (min-width: $tablet) {
+
+  @media (min-width: #{$tablet + 1px}) {
     max-width: $tablet;
   }
-  @media (min-width: $tabletLg) {
+
+  @media (min-width: #{$tabletLg + 1px}) {
     max-width: $tabletLg;
   }
-  @media (min-width: $desktop) {
+
+  @media (min-width: #{$desktop + 1px}) {
     max-width: $desktop;
   }
   & > * {
