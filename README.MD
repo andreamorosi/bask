@@ -46,16 +46,3 @@ Code copyright 2022 Andrea Morosi. MIT
 ## Browser support
 
 Bask focuses mostly on the latest versions of Chrome, Firefox, Edge and Safari. Browser support is greatly enhanced by [Autoprefixer](#https://github.com/postcss/autoprefixer).
-
-
-## TODOs
-
-[x] demo and docs page
-
-[x] refactor the grid (flexbox) -> went for CSS grid
-
-[x] work on the CSS grid mixin
-
-[ ] rethink and build some CSS elements, such as the card, basic headers, accordion (give basic JS on docs)
-
-[x] form and form elements (WIP, needs a bit of refactor)

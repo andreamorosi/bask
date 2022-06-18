@@ -18,6 +18,11 @@
     body .bg-main {
       background-color: #313131;
     }
+    .docs__wrapper {
+      max-width: 992px;
+      width: 100%;
+      padding: 0 8px;
+    }
     .table__row {
       display: flex;
       border: 1px solid #313131;
@@ -97,552 +102,541 @@
   <main role="main" class="is-docs">
 
     <section id="docs-1" class="docs__1 mar-b-2 pad-t-2 pad-b-2">
+      <div class="docs__wrapper">
+        <h1 class="title title-3 mar-b-2">
+          Bask - CSS Boilerplate
+        </h1>
+        <h2 class="title title-4 mar-b-2">Documentation and demo</h2>
+        <p class="text text-m">
+          Bask is a responsive CSS boilerplate built in SASS, with a focus on consistency and utility classes.
+        </p>
+        <p class="text text-s">
+          <a href="https://raw.githubusercontent.com/andreamorosi/bask/main/build/bask.min.css">Get the CSS</a>
+        </p>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-md-offset-3">
-            <h1 class="title title-3 mar-b-2">
-              Bask - CSS Boilerplate
-            </h1>
-            <h2 class="title title-4 mar-b-2">Documentation and demo</h2>
-            <p class="text text-m">
-              Bask is a responsive CSS boilerplate built in SASS, with a focus on consistency and utility classes.
-            </p>
-            <p class="text text-s">
-              <a href="https://raw.githubusercontent.com/andreamorosi/bask/main/build/bask.min.css">Get the CSS</a>
-            </p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="docs-2" class="docs__2 mar-b-2">
-      <div class="container">
-        <div id="siderend-1" class="row">
-          <div class="col-12 col-md-6 col-md-offset-3">
-            <em class="text text-s color-white mar-t-4">assets/css/core/_variables.scss</em>
-            <h3 class="title title-5 mar-b-1">Variables</h3>
-            <p class="text text-s">
-              Bask uses SASS variables to handle media query breakpoints, colors, fonts, but most importantly 
-              the <em>$u</em> variable.
-              <br><br>
-              The whole idea around the <em>$u</em> variable is to keep a good amount of CSS/UI consistency, 
-              which is quite useful when it comes to develop and maintain the visual aspect of web projects, 
-              aswell for theming and scaling up/down the UI (responsive, accesibility).
-            </p>
-          </div>
-        </div>
+      <div id="siderend-1" class="docs__wrapper">
+        <em class="text text-s color-white mar-t-4">assets/css/core/_variables.scss</em>
+        <h3 class="title title-5 mar-b-1">Variables</h3>
+        <p class="text text-s">
+          Bask uses SASS variables to handle media query breakpoints, colors, fonts, but most importantly 
+          the <em>$u</em> variable.
+          <br><br>
+          The whole idea around the <em>$u</em> variable is to keep a good amount of CSS/UI consistency, 
+          which is quite useful when it comes to develop and maintain the visual aspect of web projects, 
+          aswell for theming and scaling up/down the UI (responsive, accesibility).
+        </p>
       </div>
     </section>
 
     <section id="docs-3" class="docs__3 mar-b-2">
-      <div class="container">
-        <div id="siderend-2" class="row">
-          <div class="col-12 col-md-6 col-md-offset-3">
-            <em class="text text-s color-white mar-t-4">assets/css/core/_utils.scss</em>
-            <h3 class="title title-5 mar-b-1">Utilities</h3>
-            <h4 class="title title-4 mar-t-2">• Padding</h4>
-            <p class="text text-s">
-              <em>.pad</em> is the utility to handle the padding. It has 2 parameters, which go directly in the class name.
-              <br>
-              <em>.pad-{direction}-{number}</em>, where <b>{direction}</b> has to be a value from 
-              the <b>$directions</b> map (t = top,r = right,b = bottom,l = left), and <b>{number}</b> is our multiplier for the $u variable
-            </p>
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .pad-r-3
-                </div>
-                <div class="table__cell">
-                  padding-right: 24px;
-                </div>
-              </div>
-            </div>
-            <p class="text text-s">
-              <b>{r}</b> means right, <b>{3}</b> is ($u * 3), where $u = 8px.
-            </p>
-            <h4 class="title title-4 mar-t-2">• Margin</h4>
-            <p class="text text-s">
-              <em>.mar</em> .mar is the utility to handle the margin, which is exactly like the padding utility.
-            </p>
+      <div id="siderend-2" class="docs__wrapper">
 
-            
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .mar-b-7
-                </div>
-                <div class="table__cell">
-                  margin-bottom: 56px;
-                </div>
-              </div>
+        <em class="text text-s color-white mar-t-4">assets/css/core/_utils.scss</em>
+        <h3 class="title title-5 mar-b-1">Utilities</h3>
+        <h4 class="title title-4 mar-t-2">• Padding</h4>
+        <p class="text text-s">
+          <em>.pad</em> is the utility to handle the padding. It has 2 parameters, which go directly in the class name.
+          <br>
+          <em>.pad-{direction}-{number}</em>, where <b>{direction}</b> has to be a value from 
+          the <b>$directions</b> map (t = top,r = right,b = bottom,l = left), and <b>{number}</b> is our multiplier for the $u variable
+        </p>
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .pad-r-3
             </div>
-            <p class="text text-s">
-              <b>{b}</b> means bottom, <b>{7}</b> is ($u * 7), where $u = 8px.
-            </p>
-
-            
-            <h4 class="title title-4 mar-t-2">• Display</h4>
-            <p class="text text-s">
-              <em>.d</em> is the display utility, which requires additional modifiers:
-            </p>
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-b
-                </div>
-                <div class="table__cell">
-                  display: block;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-i
-                </div>
-                <div class="table__cell">
-                  display: inline;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-ib
-                </div>
-                <div class="table__cell">
-                  display: inline-block;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f
-                </div>
-                <div class="table__cell">
-                  display: flex;
-                </div>
-              </div>
+            <div class="table__cell">
+              padding-right: 24px;
             </div>
-            <p class="text text-s mar-t-2">
-              The display flex utility class has a few modifiers to handle the flexbox.
-              <br><br>
-              <em>.d-f-y</em> stands for the Y axis of the flexbox (container), it needs 1 more modifier: 
-            </p>
-
-            
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-y-center
-                </div>
-                <div class="table__cell">
-                  align-items: center;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-y-start
-                </div>
-                <div class="table__cell">
-                  align-items: flex-start;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-y-end
-                </div>
-                <div class="table__cell">
-                  align-items: flex-end;
-                </div>
-              </div>
-            </div>
-
-            <p class="text text-s mar-t-4">
-              <em>.d-f-x</em> handles the X axis, requiring 1 additional modifier:
-            </p>
-            
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-x-center
-                </div>
-                <div class="table__cell">
-                  justify-content: center;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-x-start
-                </div>
-                <div class="table__cell">
-                  justify-content: flex-start;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-x-end
-                </div>
-                <div class="table__cell">
-                  justify-content: flex-end;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-x-between
-                </div>
-                <div class="table__cell">
-                  justify-content: space-between;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-x-around
-                </div>
-                <div class="table__cell">
-                  justify-content: space-around;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .d-f-x-evenly
-                </div>
-                <div class="table__cell">
-                  justify-content: space-evenly;
-                </div>
-              </div>
-            </div>
-            
-
-            
-            <h4 class="title title-4 mar-t-2">• Color</h4>
-            <p class="text text-s">
-              <em>.color</em> is the utility for colors, using the color variables in the _variables.scss file.
-            </p>
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .color-main
-                </div>
-                <div class="table__cell">
-                  color: $main;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .color-alt
-                </div>
-                <div class="table__cell">
-                  color: $alt;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .color-off
-                </div>
-                <div class="table__cell">
-                  color: $off;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .color-white
-                </div>
-                <div class="table__cell">
-                  color: $white;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .color-black
-                </div>
-                <div class="table__cell">
-                  color: $black;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .color-grey
-                </div>
-                <div class="table__cell">
-                  color: $grey;
-                </div>
-              </div>
-            </div>
-            
-            
-            
-            <h4 class="title title-4 mar-t-2">• Background color</h4>
-            <p class="text text-s">
-              <em>.bg</em> is the utility for background colors, using the color variables in the _variables.scss file.
-            </p>
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">CSS output</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .bg-main
-                </div>
-                <div class="table__cell">
-                  background-color: $main;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .bg-alt
-                </div>
-                <div class="table__cell">
-                  background-color: $alt;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .bg-off
-                </div>
-                <div class="table__cell">
-                  background-color: $off;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .bg-white
-                </div>
-                <div class="table__cell">
-                  background-color: $white;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .bg-black
-                </div>
-                <div class="table__cell">
-                  background-color: $black;
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .bg-grey
-                </div>
-                <div class="table__cell">
-                  background-color: $grey;
-                </div>
-              </div>
-            </div>
-            
-
           </div>
         </div>
+        <p class="text text-s">
+          <b>{r}</b> means right, <b>{3}</b> is ($u * 3), where $u = 8px.
+        </p>
+        <h4 class="title title-4 mar-t-2">• Margin</h4>
+        <p class="text text-s">
+          <em>.mar</em> .mar is the utility to handle the margin, which is exactly like the padding utility.
+        </p>
+
+        
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .mar-b-7
+            </div>
+            <div class="table__cell">
+              margin-bottom: 56px;
+            </div>
+          </div>
+        </div>
+        <p class="text text-s">
+          <b>{b}</b> means bottom, <b>{7}</b> is ($u * 7), where $u = 8px.
+        </p>
+
+        
+        <h4 class="title title-4 mar-t-2">• Display</h4>
+        <p class="text text-s">
+          <em>.d</em> is the display utility, which requires additional modifiers:
+        </p>
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-b
+            </div>
+            <div class="table__cell">
+              display: block;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-i
+            </div>
+            <div class="table__cell">
+              display: inline;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-ib
+            </div>
+            <div class="table__cell">
+              display: inline-block;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f
+            </div>
+            <div class="table__cell">
+              display: flex;
+            </div>
+          </div>
+        </div>
+        <p class="text text-s mar-t-2">
+          The display flex utility class has a few modifiers to handle the flexbox.
+          <br><br>
+          <em>.d-f-y</em> stands for the Y axis of the flexbox (container), it needs 1 more modifier: 
+        </p>
+
+        
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-y-center
+            </div>
+            <div class="table__cell">
+              align-items: center;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-y-start
+            </div>
+            <div class="table__cell">
+              align-items: flex-start;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-y-end
+            </div>
+            <div class="table__cell">
+              align-items: flex-end;
+            </div>
+          </div>
+        </div>
+
+        <p class="text text-s mar-t-4">
+          <em>.d-f-x</em> handles the X axis, requiring 1 additional modifier:
+        </p>
+        
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-x-center
+            </div>
+            <div class="table__cell">
+              justify-content: center;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-x-start
+            </div>
+            <div class="table__cell">
+              justify-content: flex-start;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-x-end
+            </div>
+            <div class="table__cell">
+              justify-content: flex-end;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-x-between
+            </div>
+            <div class="table__cell">
+              justify-content: space-between;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-x-around
+            </div>
+            <div class="table__cell">
+              justify-content: space-around;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .d-f-x-evenly
+            </div>
+            <div class="table__cell">
+              justify-content: space-evenly;
+            </div>
+          </div>
+        </div>
+        
+
+        
+        <h4 class="title title-4 mar-t-2">• Color</h4>
+        <p class="text text-s">
+          <em>.color</em> is the utility for colors, using the color variables in the _variables.scss file.
+        </p>
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .color-main
+            </div>
+            <div class="table__cell">
+              color: $main;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .color-alt
+            </div>
+            <div class="table__cell">
+              color: $alt;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .color-off
+            </div>
+            <div class="table__cell">
+              color: $off;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .color-white
+            </div>
+            <div class="table__cell">
+              color: $white;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .color-black
+            </div>
+            <div class="table__cell">
+              color: $black;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .color-grey
+            </div>
+            <div class="table__cell">
+              color: $grey;
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <h4 class="title title-4 mar-t-2">• Background color</h4>
+        <p class="text text-s">
+          <em>.bg</em> is the utility for background colors, using the color variables in the _variables.scss file.
+        </p>
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">CSS output</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .bg-main
+            </div>
+            <div class="table__cell">
+              background-color: $main;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .bg-alt
+            </div>
+            <div class="table__cell">
+              background-color: $alt;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .bg-off
+            </div>
+            <div class="table__cell">
+              background-color: $off;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .bg-white
+            </div>
+            <div class="table__cell">
+              background-color: $white;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .bg-black
+            </div>
+            <div class="table__cell">
+              background-color: $black;
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .bg-grey
+            </div>
+            <div class="table__cell">
+              background-color: $grey;
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
     <section id="docs-4" class="docs__4 mar-b-2">
-      <div class="container">
-        <div id="siderend-3" class="row">
-          <div class="col-12 col-md-6 col-md-offset-3">
-            <em class="text text-s color-white mar-t-4">assets/css/elements/_typography.scss</em>
-            <h3 class="title title-5 mar-b-1">Typography</h3>
-            <p class="text text-s">
-              Bask's typography file contains both some default style for typography, 
-              such as headings, some classes to manipulate text and a few utility classes (text oriented).
-            </p>
-            
-            <h4 class="title title-4 mar-t-2">• Title</h4>
-            <p class="text text-s">
-              <em>.title</em> is the class which states the default title styles, it supports 6 size modifiers:              
-            </p>
-            
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">Result</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .title-1
-                </div>
-                <div class="table__cell">
-                  <p class="title-1 mar-t-0 mar-b-0">Title 1</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .title-2
-                </div>
-                <div class="table__cell">
-                  <p class="title-2 mar-t-0 mar-b-0">Title 2</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .title-5
-                </div>
-                <div class="table__cell">
-                  <p class="title-5 mar-t-0 mar-b-0">Title 3</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .title-4
-                </div>
-                <div class="table__cell">
-                  <p class="title-4 mar-t-0 mar-b-0">Title 4</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .title-5
-                </div>
-                <div class="table__cell">
-                  <p class="title-5 mar-t-0 mar-b-0">Title 5</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .title-6
-                </div>
-                <div class="table__cell">
-                  <p class="title-6 mar-t-0 mar-b-0">Title 6</p>
-                </div>
-              </div>
-            </div>
-            
+      <div id="siderend-3" class="docs__wrapper">
 
-            
-            <h4 class="title title-4 mar-t-2">• Text</h4>
-            <p class="text text-s">
-              <em>.text</em> is the class which states the default text styles, it supports 6 size modifiers, 
-              text centering utils and text transform utils.
-            </p>
-            
-            <div class="table w-80 text text-s color-black">
-              <div class="table__row table__row-heading">
-                <div class="table__cell bg-main color-white">Class name</div>
-                <div class="table__cell">Result</div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-xl
-                </div>
-                <div class="table__cell">
-                  <p class="text-xl mar-t-0 mar-b-0">Text XL</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-l
-                </div>
-                <div class="table__cell">
-                  <p class="text-l mar-t-0 mar-b-0">Text L</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s
-                </div>
-                <div class="table__cell">
-                  <p class="text-s mar-t-0 mar-b-0">Text M</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s
-                </div>
-                <div class="table__cell">
-                  <p class="text-s mar-t-0 mar-b-0">Text S</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-xl
-                </div>
-                <div class="table__cell">
-                  <p class="text-xs mar-t-0 mar-b-0">Text XS</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s.text-center
-                </div>
-                <div class="table__cell">
-                  <p class="text-s text-center d-b w-100 mar-t-0 mar-b-0">Text center</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s.text-left
-                </div>
-                <div class="table__cell">
-                  <p class="text-s text-left d-b w-100 mar-t-0 mar-b-0">Text left</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s.text-right
-                </div>
-                <div class="table__cell">
-                  <p class="text-s text-right d-b w-100 mar-t-0 mar-b-0">Text right</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s.text-uppercase
-                </div>
-                <div class="table__cell">
-                  <p class="text-s text-uppercase mar-t-0 mar-b-0">Text uppercase</p>
-                </div>
-              </div>
-              <div class="table__row">
-                <div class="table__cell bg-main color-white">
-                  .text-s.text-lowercase
-                </div>
-                <div class="table__cell">
-                  <p class="text-s text-lowercase mar-t-0 mar-b-0">Text lowercase</p>
-                </div>
-              </div>
+        <em class="text text-s color-white mar-t-4">assets/css/elements/_typography.scss</em>
+        <h3 class="title title-5 mar-b-1">Typography</h3>
+        <p class="text text-s">
+          Bask's typography file contains both some default style for typography, 
+          such as headings, some classes to manipulate text and a few utility classes (text oriented).
+        </p>
+        
+        <h4 class="title title-4 mar-t-2">• Title</h4>
+        <p class="text text-s">
+          <em>.title</em> is the class which states the default title styles, it supports 6 size modifiers:              
+        </p>
+        
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">Result</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .title-1
             </div>
-            
+            <div class="table__cell">
+              <p class="title-1 mar-t-0 mar-b-0">Title 1</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .title-2
+            </div>
+            <div class="table__cell">
+              <p class="title-2 mar-t-0 mar-b-0">Title 2</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .title-5
+            </div>
+            <div class="table__cell">
+              <p class="title-5 mar-t-0 mar-b-0">Title 3</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .title-4
+            </div>
+            <div class="table__cell">
+              <p class="title-4 mar-t-0 mar-b-0">Title 4</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .title-5
+            </div>
+            <div class="table__cell">
+              <p class="title-5 mar-t-0 mar-b-0">Title 5</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .title-6
+            </div>
+            <div class="table__cell">
+              <p class="title-6 mar-t-0 mar-b-0">Title 6</p>
+            </div>
           </div>
         </div>
+        
+
+        
+        <h4 class="title title-4 mar-t-2">• Text</h4>
+        <p class="text text-s">
+          <em>.text</em> is the class which states the default text styles, it supports 6 size modifiers, 
+          text centering utils and text transform utils.
+        </p>
+        
+        <div class="table w-80 text text-s color-black">
+          <div class="table__row table__row-heading">
+            <div class="table__cell bg-main color-white">Class name</div>
+            <div class="table__cell">Result</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-xl
+            </div>
+            <div class="table__cell">
+              <p class="text-xl mar-t-0 mar-b-0">Text XL</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-l
+            </div>
+            <div class="table__cell">
+              <p class="text-l mar-t-0 mar-b-0">Text L</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s
+            </div>
+            <div class="table__cell">
+              <p class="text-s mar-t-0 mar-b-0">Text M</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s
+            </div>
+            <div class="table__cell">
+              <p class="text-s mar-t-0 mar-b-0">Text S</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-xl
+            </div>
+            <div class="table__cell">
+              <p class="text-xs mar-t-0 mar-b-0">Text XS</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s.text-center
+            </div>
+            <div class="table__cell">
+              <p class="text-s text-center d-b w-100 mar-t-0 mar-b-0">Text center</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s.text-left
+            </div>
+            <div class="table__cell">
+              <p class="text-s text-left d-b w-100 mar-t-0 mar-b-0">Text left</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s.text-right
+            </div>
+            <div class="table__cell">
+              <p class="text-s text-right d-b w-100 mar-t-0 mar-b-0">Text right</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s.text-uppercase
+            </div>
+            <div class="table__cell">
+              <p class="text-s text-uppercase mar-t-0 mar-b-0">Text uppercase</p>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell bg-main color-white">
+              .text-s.text-lowercase
+            </div>
+            <div class="table__cell">
+              <p class="text-s text-lowercase mar-t-0 mar-b-0">Text lowercase</p>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
     <section id="docs-5" class="docs__4 mar-b-2">
-      <div class="container">
-        <div id="siderend-4" class="row">
-          <div class="col-12 col-md-6 col-md-offset-3">
-            <em class="text text-s color-white mar-t-4">assets/css/core/_mixins.scss</em>
-            <h3 class="title title-5 mar-b-1">Mixins</h3>
-            <p class="text text-s">
-              Most of features are handled by custom mixins, such as font handling (font-size, font-weight, etc), 
-              spacing, grid generation, responsive images, etc.
-              <br>
-              I try to keep all the mixins' code clean and add comments on how they work. I work on them 
-              very often and try to enhance the boilerplate via their usage mostly. 
-            </p>            
-            
-          </div>
-        </div>
+      <div id="siderend-4" class="docs__wrapper">
+
+        <em class="text text-s color-white mar-t-4">assets/css/core/_mixins.scss</em>
+        <h3 class="title title-5 mar-b-1">Mixins</h3>
+        <p class="text text-s">
+          Most of features are handled by custom mixins, such as font handling (font-size, font-weight, etc), 
+          spacing, grid generation, responsive images, etc.
+          <br>
+          I try to keep all the mixins' code clean and add comments on how they work. I work on them 
+          very often and try to enhance the boilerplate via their usage mostly. 
+        </p>            
+        
       </div>
     </section>
 
