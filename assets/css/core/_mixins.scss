@@ -162,9 +162,11 @@
 // Mixin to generate a spacer with padding, an util to add
 // vertical spacing to a web page's section.
 @mixin spacer($multiplier-1,$multiplier-2) {
-  padding: ($multiplier-1*$u*4) 0 ($multiplier-2*$u*4);
+  padding-top: ($multiplier-1*$u*4);
+  padding-bottom: ($multiplier-2*$u*4);
   @media (min-width: $mobile) {
-    padding: ($multiplier-1*$u*8) 0 ($multiplier-2*$u*8);
+    padding-top: ($multiplier-1*$u*8);
+    padding-bottom: ($multiplier-2*$u*8);
   }
 }
 
