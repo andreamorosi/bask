@@ -9,7 +9,6 @@ body {
   @include text(12, 16, 1.5, 400, main);
   min-height: 100vh;
   text-rendering: optimizeLegibility;
-  //transition: filter $motion 1s;
   overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;
@@ -23,7 +22,6 @@ body {
 
 html {
   overflow-x: hidden;
-  //background: $alt;
 }
 
 main {
@@ -32,7 +30,6 @@ main {
 
 //Resetting elements
 ul {
-  list-style: none;
   padding: 0;
   margin: 0;
 }

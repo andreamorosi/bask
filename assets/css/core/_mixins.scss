@@ -59,8 +59,7 @@
   display: grid;
   grid-template-columns: repeat(4, [col-start] minmax(0, 1fr));
   grid-template-rows: max-content;
-  //grid-template-rows: minmax(100px,auto);
-  gap: $u*3;
+  gap: $u*2;
   margin: 0 auto;
   padding-left: $u*2;
   padding-right: $u*2;
@@ -179,7 +178,7 @@
   }
 }
 
-// Mixin for responsive fill images
+// Mixin for responsive fill-style images
 @mixin img {
   width: 100%;
   height: 100%;

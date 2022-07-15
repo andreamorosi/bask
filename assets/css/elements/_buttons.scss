@@ -13,7 +13,7 @@
   text-decoration: none;
   @include padding(2,4,2,4);
   margin-bottom: $u*2;
-  transition: all $motion .1s;
+  transition: all $motion $m;
   overflow: hidden;
   z-index: 1;
   appearance: none;
@@ -21,7 +21,7 @@
     border-color: $main;
     background: $white;
     color: $main;
-    transition: all $motion .15s;
+    transition: all $motion $m*1.5;
   }
 
   // .btn alternative styles
