@@ -19,8 +19,8 @@ $motion:        cubic-bezier(0.45, 0.05, 0.55, 0.95);
 $m:             0.15s;
 
 // Font families
-$font-main: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$font-off: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-main: 'Lato', -apple-system, sans-serif;
+$font-off: 'Roboto', -apple-system, sans-serif;
 
 // Various
 $u:          8px;
