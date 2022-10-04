@@ -35,7 +35,7 @@ https://andreamorosi.github.io/bask/
 
 ## Built with
 
-SASS & Webpack
+SASS & Rollup
 
 
 ## Copyright and license
