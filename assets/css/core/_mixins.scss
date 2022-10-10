@@ -10,22 +10,26 @@
   }
 
   font-size: $fontSizeMin+px;
-  font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 2.25vw),#{($fontSizeMax)}px);
+  font-size: clamp(#{($fontSizeMin)}px,calc(1rem + ((1vw - 7.68px) * 1.1285)),#{($fontSizeMax)}px);
+
+  min-height: 0vw;
+
+  // https://websemantics.uk/tools/responsive-font-calculator/
 
   @if $fontSizeMax >= 30 {
-    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 3vw),#{($fontSizeMax)}px);
+    font-size: clamp(#{($fontSizeMin)}px,calc(1.875rem + ((1vw - 7.68px) * 0.7813)),#{($fontSizeMax)}px);
   }
   @if $fontSizeMax >= 40 {
-    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 3.5vw),#{($fontSizeMax)}px);
+    font-size: clamp(#{($fontSizeMin)}px,calc(2.5rem + ((1vw - 7.68px) * 0.7813)),#{($fontSizeMax)}px);
   }
   @if $fontSizeMax >= 50 {
-    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 4vw),#{($fontSizeMax)}px);
+    font-size: clamp(#{($fontSizeMin)}px,calc(3.125rem + ((1vw - 7.68px) * 0.7813)),#{($fontSizeMax)}px);
   }
   @if $fontSizeMax >= 60 {
-    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 4.5vw),#{($fontSizeMax)}px);
+    font-size: clamp(#{($fontSizeMin)}px,calc(3.75rem + ((1vw - 7.68px) * 0.7813)),#{($fontSizeMax)}px);
   }
   @if $fontSizeMax >= 70 {
-    font-size: clamp(#{($fontSizeMin)}px,calc(-0.8750rem + 5.5vw),#{($fontSizeMax)}px);
+    font-size: clamp(#{($fontSizeMin)}px,calc(4.375rem + ((1vw - 7.68px) * 0.7813)),#{($fontSizeMax)}px);
   }
 
   line-height: $lineHeight;
