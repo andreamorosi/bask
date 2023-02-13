@@ -87,7 +87,7 @@
     grid-column: span 4;
     position: relative;
     z-index: 1;
-    @media (min-width: $mobile) {
+    @media (min-width: #{$mobile + 1px}) {
       grid-column: span 12;
     }
   }
