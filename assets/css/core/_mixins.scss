@@ -15,22 +15,22 @@
   min-height: 0vw;
 
   // fluid type scale tool used: https://websemantics.uk/tools/responsive-font-calculator/
-  @if $fontSizeMax >= 12.8 and $fontSizeMax < 16 {
+  @if $fontSizeMin >= 12.8 and $fontSizeMax < 16 {
     font-size: clamp(#{($fontSizeMin)}px,0.36vw + 0.71rem,#{($fontSizeMax)}px);
   }
-  @if $fontSizeMax >= 16 and $fontSizeMax < 20 {
+  @if $fontSizeMin >= 16 and $fontSizeMax < 20 {
     font-size: clamp(#{($fontSizeMin)}px,0.45vw + 0.89rem,#{($fontSizeMax)}px);
   }
-  @if $fontSizeMax >= 20 and $fontSizeMax < 24.96 {
+  @if $fontSizeMin >= 20 and $fontSizeMax < 24.96 {
     font-size: clamp(#{($fontSizeMin)}px,0.57vw + 1.11rem,#{($fontSizeMax)}px);
   }
-  @if $fontSizeMax >= 24.96 and $fontSizeMax < 31.2 {
+  @if $fontSizeMin >= 24.96 and $fontSizeMax < 31.2 {
     font-size: clamp(#{($fontSizeMin)}px,0.71vw + 1.38rem,#{($fontSizeMax)}px);
   }
-  @if $fontSizeMax >= 31.2 and $fontSizeMax < 39.04 {
+  @if $fontSizeMin >= 31.2 and $fontSizeMax < 39.04 {
     font-size: clamp(#{($fontSizeMin)}px,0.89vw + 1.73rem,#{($fontSizeMax)}px);
   }
-  @if $fontSizeMax >= 39.04 {
+  @if $fontSizeMin >= 39.04 {
     font-size: clamp(#{($fontSizeMin)}px,1.11vw + 2.16rem,#{($fontSizeMax)}px);
   }
 
