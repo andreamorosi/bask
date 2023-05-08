@@ -11,13 +11,13 @@
     @include text(39.04, 48.8, 1.1, 700, null);
   }
   &-2 {
-    @include text(31.2, 39.04, 1, 700, null);
+    @include text(31.2, 39.04, 1.2, 700, null);
   }
   &-3 {
     @include text(24.96, 31.2, 1.2, 700, null);
   }
   &-4 {
-    @include text(20, 24.96, 1.5, 500, null);
+    @include text(20, 24.96, 1.2, 500, null);
     margin: 0 0 $u*2;
   }
   &-5 {
