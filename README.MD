@@ -40,7 +40,7 @@ SASS & Rollup
 
 ## Copyright and license
 
-Code copyright 2022 Andrea Morosi. MIT
+Code copyright 2023 Andrea Morosi. MIT
 
 
 ## Browser support
