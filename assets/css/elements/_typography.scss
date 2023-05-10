@@ -21,11 +21,11 @@
     margin: 0 0 $u*2;
   }
   &-5 {
-    @include text(16, 20, 1.2, 400, null);
+    @include text(16, 20, 1.1, 400, null);
     margin: 0 0 $u*2;
   }
   &-6 {
-    @include text(12.8, 16, 1.2, 400, null);
+    @include text(12.8, 16, 1.1, 400, null);
     margin: 0 0 $u*2;
   }
 }//end of title
@@ -110,22 +110,6 @@
   &-300 {
     font-weight: 300;
   }
-
-  //obsolete, to remove and update docs
-  &-l {
-    font-weight: 700;
-  }
-
-  &-m {
-    font-weight: 500;
-  }
-
-  &-s {
-    font-weight: 400;
-  }
-  &-xs {
-    font-weight: 300;
-  }
 }//end of font-weight
 
 //headings
@@ -148,12 +132,18 @@ h6 {
   @extend .title-6;
 }//end of headings
 
-//others
-em {
-  font-style: initial;
-  background-color: $main;
-  color: $white;
-  margin: 0 0 $u*2;
-  @include padding(0,0.5,0,0.5);
+
+.list {
+  list-style: initial;
+  padding-left: $u*2;
+
+  li {
+    @include text(12.8, 16, 1.5, 400, main);
+    color: inherit;
+    margin: 0 0 $u;
+
+    &::marker {
+      color: inherit;
+    }
+  }
 }
-//end of others

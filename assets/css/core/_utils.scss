@@ -1,34 +1,114 @@
+// Padding to generate single padding rules, from 0 to 20
+// Example: pad-t-4 === padding-top: $u*4
+.pad {
+  @each $tag, $direction in $directions {
+    &-#{$tag} {
+      @for $i from 0 through 20 {
+        &-#{$i} {
+          padding-#{$direction}: ($u * $i);
+        }
+      }
+    }
+  }
+}
+
+// Margin util to generate single margin rules, from 0 to 20
+// Example: mar-r-4 === margin-right: $u*4
+.mar {
+  @each $tag, $direction in $directions {
+    &-#{$tag} {
+      @for $i from 0 through 20 {
+        &-#{$i} {
+          margin-#{$direction}: ($u * $i);
+        }
+      }
+    }
+  }
+}
+
+// Width util to generate width sizes, from 0 to 10
+// Example: w-40 === width: 40%
+.w {
+  @for $i from 0 through 10 {
+    &-#{$i * 10} {
+      width: ($i * 10%);
+    }
+  }
+}
+
+// Height util to generate height sizes, from 0 to 10
+// Example: w-40 === height: 40%
+.h {
+  @for $i from 0 through 10 {
+    &-#{$i * 10} {
+      height: ($i * 10%);
+    }
+  }
+}
+
+// Background util
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+// Color util
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+}
+
+// Vertical spacing utils via padding (from mixin)
+// Example: .spacer-3 
+.spacer {
+  @for $i from 0 through 5 {
+    &-#{$i} {
+      @include spacer($i,$i);
+    }
+  }
+}
+
+// Vertical spacing utils via margin (from mixin)
+// Example: .spacer-margin-3 
+.spacer-margin {
+  @for $i from 0 through 5 {
+    &-#{$i} {
+      @include spacer-margin($i,$i);
+    }
+  }
+}
+
+// Grid util - Grid 
+.grid {
+  @include gridgen;
+
+  &-nogap {
+    gap: 0;
+  }
+}
+
+// Grid util - Columns
+.col {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      grid-column: span $i / span $i;
+    }
+  }
+}
+
 // Behaviors blocking utils
 .block {
   &-anim {
     transition: none!important;
   }
   &-scroll {
-    overflow: hidden
+    overflow: hidden;
   }
 }
 
-// Padding util
-.pad {
-  @include pad-generator;
-}
-
-// Margin util
-.mar {
-  @include mar-generator;
-}
-
-// Width util
-.w {
-  @include width-generator;
-}
-
-// Height util
-.h {
-  @include height-generator;
-}
-
-// Display
+// Display util
 .d {
 
   // Display flex
@@ -83,47 +163,3 @@
     display: inline-block;
   }
 }
-
-//colors
-.color {
-  &-white {
-    color: $white;
-  }
-  &-black {
-    color: $black;
-  }
-  &-grey {
-    color: $grey;
-  }
-  &-main {
-    color: $main;
-  }
-  &-alt {
-    color: $alt;
-  }
-  &-off {
-    color: $off;
-  }
-}//end of colors
-
-//backgrounds
-.bg {
-  &-white {
-    background-color: $white;
-  }
-  &-black {
-    background-color: $black;
-  }
-  &-grey {
-    background-color: $grey;
-  }
-  &-main {
-    background-color: $main;
-  }
-  &-alt {
-    background-color: $alt;
-  }
-  &-off {
-    background-color: $off;
-  }
-}//end of backgrounds

@@ -13,21 +13,23 @@
   text-decoration: none;
   @include padding(2,4,2,4);
   margin-bottom: $u*2;
-  transition: all $motion $m;
+  transition: all $motion-out $m*2;
   overflow: hidden;
   z-index: 1;
   appearance: none;
+
   &:hover {
     border-color: $main;
     background: $white;
     color: $main;
-    transition: all $motion $m*1.5;
+    transition: all $motion-in $m*2.5;
   }
 
   // .btn alternative styles
   &-alt {
     background: transparent;
     border-color: $alt;
+
     &:hover {
       border-color: $alt;
       color: $white;
@@ -37,6 +39,7 @@
   &-line {
     color: $main;
     background: transparent;
+
     &:hover {
       color: $main;
     }
@@ -45,6 +48,7 @@
     color: $white;
     background: $off;
     border-color: $off;
+    
     &:hover {
       border-color: $off;
       background: $off;

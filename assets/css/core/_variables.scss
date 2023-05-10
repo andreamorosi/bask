@@ -1,10 +1,20 @@
 // Colors
-$black:     #1C1C1C;
-$white:     #FFF;
-$grey:      #efe8d8;
-$main:      #e42c64;
-$alt:       #00F5ED;
-$off:       #6b48ff;
+$black:     #111111;
+$white:     #FFFAFA;
+$grey:      #747578;
+$main:      #2589BD;
+$alt:       #FCA311;
+$off:       #FCA311;
+
+$colors: (
+  "black":  $black,
+  "white":  $white,
+  "grey":   $grey,
+  "main":   $main,
+  "alt":    $alt,
+  "off":    $off,
+);
+
 
 // Media Queries
 $mobileSm:      400px;
@@ -16,6 +26,8 @@ $desktopLg:     1600px;
 
 // Motion
 $motion:        cubic-bezier(0.45, 0.05, 0.55, 0.95);
+$motion-out:    cubic-bezier(0.5, 1, 0.89, 1);
+$motion-in:     cubic-bezier(0.11, 0, 0.5, 0);
 $m:             0.15s;
 
 // Font families

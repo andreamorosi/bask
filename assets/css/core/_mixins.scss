@@ -63,15 +63,16 @@
 // Grid generator
 @mixin gridgen {
   display: grid;
-  grid-template-columns: repeat(4, [col-start] minmax(0, 1fr));
+  grid-template-columns: repeat(4, [col-start] minmax(auto, 1fr));
   grid-template-rows: max-content;
   gap: $u*2;
   margin: 0 auto;
   padding-left: $u*2;
   padding-right: $u*2;
+
   @media (min-width: #{$mobile + 1px}) {
     max-width: $mobile;
-    grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
+    grid-template-columns: repeat(12, [col-start] minmax(auto, 1fr));
   }
 
   @media (min-width: #{$tablet + 1px}) {
@@ -89,6 +90,7 @@
     grid-column: span 4;
     position: relative;
     z-index: 1;
+
     @media (min-width: #{$mobile + 1px}) {
       grid-column: span 12;
     }
@@ -110,58 +112,6 @@
 // Mixin to generate margin using the $u variable
 @mixin margin ($top, $right, $bottom, $left) {
   margin: ($u * $top) ($u * $right) ($u * $bottom) ($u * $left);
-}
-
-// Mixin to generate single padding rules, from 0 to 20
-// Example: pad-t-4 === padding-top: $u*4
-// Mixin used in _utils.scss
-@mixin pad-generator {
-  @each $tag, $direction in $directions {
-    &-#{$tag} {
-      @for $i from 0 through 20 {
-        &-#{$i} {
-          padding-#{$direction}: ($u * $i);
-        }
-      }
-    }
-  }
-}
-
-// Mixin to generate single margin rules, from 0 to 20
-// Example: mar-r-4 === margin-right: $u*4
-// Mixin used in _utils.scss
-@mixin mar-generator {
-  @each $tag, $direction in $directions {
-    &-#{$tag} {
-      @for $i from 0 through 20 {
-        &-#{$i} {
-          margin-#{$direction}: ($u * $i);
-        }
-      }
-    }
-  }
-}
-
-// Mixin to generate width sizes, from 0 to 10
-// Example: w-40 === width: 40%
-// Mixin used in _utils.scss
-@mixin width-generator {
-  @for $i from 0 through 10 {
-    &-#{$i * 10} {
-      width: ($i * 10%);
-    }
-  }
-}
-
-// Mixin to generate height sizes, from 0 to 10
-// Example: w-40 === height: 40%
-// Mixin used in _utils.scss
-@mixin height-generator {
-  @for $i from 0 through 10 {
-    &-#{$i * 10} {
-      height: ($i * 10%);
-    }
-  }
 }
 
 // Mixin to generate a spacer with padding, an util to add

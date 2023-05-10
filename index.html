@@ -4,644 +4,757 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bask - CSS Boilerplate Documentation</title>
+  <title>Bask - CSS Library Documentation</title>
   <link rel="stylesheet" href="build/bask.min.css">
   <style>
-    body {
-      background-color: whitesmoke;
-      color: #313131;
-    }
     body em {
-      background-color: #313131;
-      color: whitesmoke;
+      background-color: #111111;
+      color: #FFFAFA;
+      padding: 0.125rem 0.25rem;
+      font-style: initial;
     }
-    body .bg-main {
-      background-color: #313131;
+    pre {
+      background-color: #111111;
+      color: #FFFAFA;
     }
-    .docs__wrapper {
-      max-width: 768px;
-      width: 100%;
-      padding: 0 8px;
-      margin: 0 auto;
+    i {
+      font-style: initial;
     }
-    .table__row {
-      display: flex;
-      border: 1px solid #313131;
-      border-bottom: 0;
-    }
-    .table__row:last-child {
-      border-bottom: 1px solid #313131;
-    }
-    .table__row:nth-child(2) {
-      border-top: 0;
-    }
-    .table__row.table__row-heading {
-      font-size: 1.2em;
-      border-color: #005eff;
-      border-bottom: 1px solid #005eff;
-    }
-    .table__row.table__row-heading > .bg-main {
-      background-color: #005eff;
-    }
-    .table__row.table__row-heading > .table__cell:first-child:after {
-      border-left: 8px solid #005eff;
-    }
-    .table__cell:first-child {
+    body {
       position: relative;
-      flex: 1;
+      overflow: initial;
     }
-    .table__cell:first-child:after {
-      content: "";
+    .background {
       position: absolute;
-      border-top: 8px solid transparent;
-      border-left: 8px solid #313131;
-      border-bottom: 8px solid transparent;
-      right: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .table__cell {
-      flex: 1;
-      padding: 16px;
-      color: #313131;
-    }
-    .table__cell.color-white {
-      color: whitesmoke;
-    }
-    .sider {
-      position: fixed;
       top: 0;
       left: 0;
-      width: 250px;
+      pointer-events: none;
+      z-index: 0;
+      width: 100%;
       height: 100%;
-      border-right: 6px solid #005eff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 0 40px;
+      opacity: 0.1;
+      background-image:  linear-gradient(#747578 1px, transparent 1px), linear-gradient(to right, #747578 1px, #FFFAFA 1px);
+      background-size: 4rem 4rem;
     }
-    .sider__item {
-      cursor: pointer;
+    .border {
+      border: 1px solid #2589BD;
     }
-    .sider__item:hover {
-      text-decoration: underline;
+    .grid.grid-nogap {
+      padding: 0;
+      margin-bottom: 0.5rem;
     }
-    @media (max-width: 767px) {
-      .table.w-80 {
-        width: 100%;
-      }
-      .sider {
+    .asider {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      height: fit-content;
+
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .asider {
         display: none;
       }
+    }
+    .group {
+      padding: 2rem 2rem 1rem;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0px 2px 4px rgba(0,0,0, 0.35);
+      background: #FFFAFA;
     }
   </style>
 </head>
 
 <body>
+  <div class="background"></div>
+  <div class="grid">
 
-  <main role="main" class="is-docs">
-
-    <section id="docs-1" class="docs__1 mar-b-2 pad-t-2 pad-b-2">
-      <div class="docs__wrapper">
-        <h1 class="title title-3 mar-b-2">
-          Bask - CSS Boilerplate
+    <aside class="col-3 bg-main color-white asider">
+      Aside
+    </aside>
+  
+    <div class="col-2"></div>
+    <main role="main" class="col-8">
+  
+      <section id="docs-1" class="spacer-margin-1">
+        <h1 class="title title-1 mar-b-2">
+          Bask - CSS Library
         </h1>
-        <h2 class="title title-4 mar-b-2">Documentation and demo</h2>
+        <h2 class="title title-3 mar-b-2">
+          Documentation and demo
+        </h2>
+        <p class="text text-l mar-b-0">
+          Bask is a responsive CSS library built in SASS (SCSS), with a focus on consistency and utility classes.
+        </p>
+      </section>
+  
+      <section id="docs-2" class="spacer-margin-1">
+        <h3 class="title title-3 mar-b-2">
+          Getting started
+        </h3>
         <p class="text text-m">
-          Bask is a responsive CSS boilerplate built in SASS, with a focus on consistency and utility classes.
+          There are 3 ways to get Bask:
         </p>
-        <p class="text text-s">
-          <a href="https://raw.githubusercontent.com/andreamorosi/bask/main/build/bask.min.css">Get the CSS</a>
+  
+        <ul class="text text-m list">
+          <li>
+            CDN: 
+          </li>
+          <li>
+            NPM: <em>npm install bask</em>
+          </li>
+          <li>
+            ZIP: download from Github
+          </li>
+        </ul>
+      </section>
+  
+      <section id="docs-3" class="spacer-margin-1">
+        <p class="text text-s color-main mar-b-0 font-w-600">assets/css/core/_utils.scss</p>
+        <h3 class="title title-3 mar-b-2">
+          Utils
+        </h3>
+        <p class="text text-m">
+          Bask has many utility CSS classes aimed to speed up the development process, without polarizing it.
         </p>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 col-md-offset-3">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="docs-2" class="docs__2 mar-b-2">
-      <div id="siderend-1" class="docs__wrapper">
-        <em class="text text-s color-white mar-t-4">assets/css/core/_variables.scss</em>
-        <h3 class="title title-5 mar-b-1">Variables</h3>
-        <p class="text text-s">
-          Bask uses SASS variables to handle media query breakpoints, colors, fonts, but most importantly 
-          the <em>$u</em> variable.
-          <br><br>
-          The whole idea around the <em>$u</em> variable is to keep a good amount of CSS/UI consistency, 
-          which is quite useful when it comes to develop and maintain the visual aspect of web projects, 
-          aswell for theming and scaling up/down the UI (responsive, accesibility).
-        </p>
-      </div>
-    </section>
-
-    <section id="docs-3" class="docs__3 mar-b-2">
-      <div id="siderend-2" class="docs__wrapper">
-
-        <em class="text text-s color-white mar-t-4">assets/css/core/_utils.scss</em>
-        <h3 class="title title-5 mar-b-1">Utilities</h3>
-        <h4 class="title title-4 mar-t-2">• Padding</h4>
-        <p class="text text-s">
-          <em>.pad</em> is the utility to handle the padding. It has 2 parameters, which go directly in the class name.
-          <br>
-          <em>.pad-{direction}-{number}</em>, where <b>{direction}</b> has to be a value from 
-          the <b>$directions</b> map (t = top,r = right,b = bottom,l = left), and <b>{number}</b> is our multiplier for the $u variable
-        </p>
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .pad-r-3
+        <hr>
+        <div class="group">
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Padding util
+          </h4>
+          <p class="text text-m">
+            <em>.pad</em> is the utility to handle the padding. It has 2 parameters, which go directly in the class name.
+          </p>
+          <p class="text text-m">
+            <em>.pad-{direction}-{number}</em>, where <b>{direction}</b> has to be a value from 
+            the <b>$directions</b> map (t = top,r = right,b = bottom,l = left), and <b>{number}</b> 
+            is our multiplier for the $u variable
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="pad-r-3"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               padding-right: 24px;
             </div>
           </div>
+          <p class="text text-m">
+            <em>pad</em> is padding
+            <br>
+            <em>r</em> is right, the direction
+            <br>
+            <em>3</em> is the multiplier parameter.
+            <br>
+            Which translates to <em>padding-right: 24px;</em>, because the multiplier parameter (3) gets multiplied 
+            by 8px.
+          </p>
         </div>
-        <p class="text text-s">
-          <b>{r}</b> means right, <b>{3}</b> is ($u * 3), where $u = 8px.
-        </p>
-        <h4 class="title title-4 mar-t-2">• Margin</h4>
-        <p class="text text-s">
-          <em>.mar</em> .mar is the utility to handle the margin, which is exactly like the padding utility.
-        </p>
-
         
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .mar-b-7
+        <!-- break -->
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Margin util
+          </h4>
+          <p class="text text-m">
+            <em>.mar</em> is the utility to handle the margin. It has 2 parameters, which go directly in the class name.
+          </p>
+          <p class="text text-m">
+            <em>.mar-{direction}-{number}</em>, where <b>{direction}</b> has to be a value from 
+            the <b>$directions</b> map (t = top,r = right,b = bottom,l = left), and <b>{number}</b> 
+            is our multiplier for the $u variable
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="mar-b-4"&gt;
             </div>
-            <div class="table__cell">
-              margin-bottom: 56px;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              margin-bottom: 32px;
+            </div>
+          </div>
+          <p class="text text-m">
+            <em>mar</em> is margin
+            <br>
+            <em>b</em> is bottom, the direction
+            <br>
+            <em>4</em> is the multiplier parameter.
+            <br>
+            Which translates to <em>margin-bottom: 32px;</em>, because the multiplier parameter (4) gets multiplied 
+            by 8px.
+          </p>
+        </div>
+        <!-- break -->
+  
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Color util
+          </h4>
+          <p class="text text-m">
+            <em>.color</em> is the utility to handle the color. It has 1 parameter.
+          </p>
+          <p class="text text-m">
+            <em>.color-{variable}</em> where <b>{variable}</b> is the color variable defined in the _variables.scss file.
+            <br>
+            By default there are 5 color variables in Bask: main, alt, off, white and black.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="color-main"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              color: $main;
             </div>
           </div>
         </div>
-        <p class="text text-s">
-          <b>{b}</b> means bottom, <b>{7}</b> is ($u * 7), where $u = 8px.
-        </p>
-
         
-        <h4 class="title title-4 mar-t-2">• Display</h4>
-        <p class="text text-s">
-          <em>.d</em> is the display utility, which requires additional modifiers:
-        </p>
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-b
+        <!-- break -->
+  
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Background color util
+          </h4>
+          <p class="text text-m">
+            <em>.bg</em> is the utility to handle the background-color. It has 1 parameter.
+          </p>
+          <p class="text text-m">
+            <em>.bg-{variable}</em> where <b>{variable}</b> is the color variable defined in the _variables.scss file.
+            <br>
+            By default there are 5 color variables in Bask: main, alt, off, white and black.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="bg-black"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              background-color: $black;
+            </div>
+          </div>
+        </div>
+        <!-- break -->
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Spacer (padding) util
+          </h4>
+          <p class="text text-m">
+            <em>.spacer</em> is the utility to generate a vertical spacer via padding.
+          </p>
+          <p class="text text-m">
+            <em>.spacer-{value}</em> where <b>{value}</b> is a number which goes from 0 to 5.
+            <br>
+            This value will get multiplied by 8px (the <em>$u</em> variable) a number of times.
+            Check the mixin in the <span class="color-main font-w-600">assets/css/core/_mixins.scss</span> file 
+            for more info.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="spacer-1"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              padding-top: 64px;
+              <br>
+              padding-bottom: 64px;
+            </div>
+          </div>
+        </div>
+        <!-- break -->
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Spacer (margin) util
+          </h4>
+          <p class="text text-m">
+            <em>.spacer-margin</em> is the utility to generate a vertical spacer via margin.
+          </p>
+          <p class="text text-m">
+            <em>.spacer-margin-{value}</em> where <b>{value}</b> is a number which goes from 0 to 5.
+            <br>
+            This value will get multiplied by 8px (the <em>$u</em> variable) a number of times.
+            Check the mixin in the <span class="color-main font-w-600">assets/css/core/_mixins.scss</span> file 
+            for more info.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="spacer-margin-2"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              margin-top: 128px;
+              <br>
+              margin-bottom: 128px;
+            </div>
+          </div>
+        </div>
+        <!-- break -->
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Display utils
+          </h4>
+          <p class="text text-m">
+            <em>.d</em> is the utility to handle the display property. It can have multiple parameters.
+          </p>
+          <p class="text text-m">
+            <em>.d-{value}</em> where <b>{value}</b> is the display property.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-b"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               display: block;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-i
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-i"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               display: inline;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-ib
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-ib"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               display: inline-block;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               display: flex;
             </div>
           </div>
-        </div>
-        <p class="text text-s mar-t-2">
-          The display flex utility class has a few modifiers to handle the flexbox.
-          <br><br>
-          <em>.d-f-y</em> stands for the Y axis of the flexbox (container), it needs 1 more modifier: 
-        </p>
-
-        
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-y-center
+          <p class="text text-m mar-t-2">
+            The display flex utility class has a few modifiers to handle the flexbox.
+            <br>
+            <em>.d-f-y</em> stands for the Y axis of the flexbox (container), it needs 1 more modifier:
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-y-center"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               align-items: center;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-y-start
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-y-start"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               align-items: flex-start;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-y-end
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-y-end"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               align-items: flex-end;
             </div>
           </div>
-        </div>
-
-        <p class="text text-s mar-t-4">
-          <em>.d-f-x</em> handles the X axis, requiring 1 additional modifier:
-        </p>
-        
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-x-center
+          <p class="text text-m mar-t-2">
+            <em>.d-f-x</em> handles the X axis, requiring 1 additional modifier:
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-x-center"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               justify-content: center;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-x-start
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-x-start"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               justify-content: flex-start;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-x-end
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-x-end"&gt;
             </div>
-            <div class="table__cell">
-              justify-content: flex-end;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              justify-content: flex-start;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-x-between
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-x-between"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               justify-content: space-between;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-x-around
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-x-around"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               justify-content: space-around;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .d-f-x-evenly
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="d-f-x-evenly"&gt;
             </div>
-            <div class="table__cell">
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
               justify-content: space-evenly;
             </div>
           </div>
         </div>
         
-
-        
-        <h4 class="title title-4 mar-t-2">• Color</h4>
-        <p class="text text-s">
-          <em>.color</em> is the utility for colors, using the color variables in the _variables.scss file.
-        </p>
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .color-main
+        <!-- break -->
+        <div class="group">
+  
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Width util
+          </h4>
+          <p class="text text-m">
+            <em>.w</em> is the utility to handle the width size based on %. It has 1 parameter.
+          </p>
+          <p class="text text-m">
+            <em>.w-{value}</em> where <b>{value}</b> is the % value of the size, and it ranges from 0 to 100
+            <br>
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="w-40"&gt;
             </div>
-            <div class="table__cell">
-              color: $main;
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .color-alt
-            </div>
-            <div class="table__cell">
-              color: $alt;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              width: 40%;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .color-off
+          <hr>
+          <!-- break -->
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Height util
+          </h4>
+          <p class="text text-m">
+            <em>.h</em> is the utility to handle the height size based on %. It has 1 parameter.
+          </p>
+          <p class="text text-m">
+            <em>.h-{value}</em> where <b>{value}</b> is the % value of the size, and it ranges from 0 to 100
+            <br>
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="h-70"&gt;
             </div>
-            <div class="table__cell">
-              color: $off;
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .color-white
-            </div>
-            <div class="table__cell">
-              color: $white;
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .color-black
-            </div>
-            <div class="table__cell">
-              color: $black;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              height: 70%;
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .color-grey
+        </div>
+        <!-- break -->
+      </section>
+  
+      <section id="docs-4" class="spacer-margin-1">
+        <p class="text text-s color-main mar-b-0 font-w-600">assets/css/core/_utils.scss</p>
+        <p class="text text-s color-main mar-b-0 font-w-600">assets/css/core/_mixins.scss</p>
+        <h3 class="title title-3 mar-b-2">
+          Grid System
+        </h3>
+        <hr>
+  
+        <div class="group">
+          <p class="text text-m">
+            Bask's grid system is based on CSS Grid, and it works with just 2 elements (container and column) 
+            instead of the typical trio (container, row and column).
+            <br>
+            Check the mixin in the <span class="color-main font-w-600">assets/css/core/_mixins.scss</span> file 
+              for more info.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="grid"&gt;
             </div>
-            <div class="table__cell">
-              color: $grey;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              display: grid;
+            </div>
+          </div>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="col-7"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              grid-column: span 7 / span 7;
             </div>
           </div>
         </div>
         
+      </section>
+  
+      <section id="docs-5" class="spacer-margin-1">
+        <p class="text text-s color-main mar-b-0 font-w-600">assets/css/core/_variables.scss</p>
+        <h3 class="title title-3 mar-b-2">
+          Variables
+        </h3>
+        <hr>
+  
+        <div class="group">
+          <p class="text text-m">
+            Bask uses SASS (SCSS) variables to handle media query breakpoints, colors, fonts, but most importantly the <em>$u</em> variable.
+          </p>
+          <p class="text text-m">
+            The whole idea around the <em>$u</em> variable is to keep a good amount of CSS/UI consistency, which is quite useful when it comes to develop and maintain the visual aspect of web projects, aswell for theming and scaling up/down the UI (responsive, accesibility).
+          </p>
+        </div>
         
-        
-        <h4 class="title title-4 mar-t-2">• Background color</h4>
-        <p class="text text-s">
-          <em>.bg</em> is the utility for background colors, using the color variables in the _variables.scss file.
+      </section>
+  
+      <section id="docs-5" class="spacer-margin-1">
+        <p class="text text-s color-main mar-b-0 font-w-600">assets/css/elements/_typography.scss</p>
+        <p class="text text-s color-main mar-b-0 font-w-600">assets/css/core/_mixins.scss</p>
+        <h3 class="title title-3 mar-b-2">
+          Typography
+        </h3>
+        <p class="text text-m">
+          Bask's typography file contains both some default style for typography, such as headings, some classes to manipulate text and a few utility classes (text oriented).
         </p>
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">CSS output</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .bg-main
+        <p class="text text-m">
+          The font sizes (and more) are handled via the <em>text() mixin</em> which implements a
+          <b>fluid type scale</b> based on 
+          <a href="https://www.fluid-type-scale.com/" target="_blank" rel="noopener noreferrer" class="color-main font-w-700">
+            https://www.fluid-type-scale.com/
+          </a>
+        </p>
+        <hr>
+  
+        <div class="group">
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Title
+          </h4>
+          <p class="text text-m">
+            <em>.title</em> is the class which states the default title styles, it supports 6 size modifiers:
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="title title-1"&gt;
             </div>
-            <div class="table__cell">
-              background-color: $main;
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .bg-alt
-            </div>
-            <div class="table__cell">
-              background-color: $alt;
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .bg-off
-            </div>
-            <div class="table__cell">
-              background-color: $off;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="title title-1">Title 1</div>
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .bg-white
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="title title-2"&gt;
             </div>
-            <div class="table__cell">
-              background-color: $white;
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .bg-black
-            </div>
-            <div class="table__cell">
-              background-color: $black;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="title title-2">Title 2</div>
             </div>
           </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .bg-grey
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="title title-3"&gt;
             </div>
-            <div class="table__cell">
-              background-color: $grey;
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="title title-3">Title 3</div>
+            </div>
+          </div>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="title title-4"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="title title-4">Title 4</div>
+            </div>
+          </div>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="title title-5"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="title title-5">Title 5</div>
+            </div>
+          </div>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="title title-6"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="title title-6">Title 6</div>
             </div>
           </div>
         </div>
-        
-      </div>
-    </section>
-
-    <section id="docs-4" class="docs__4 mar-b-2">
-      <div id="siderend-3" class="docs__wrapper">
-
-        <em class="text text-s color-white mar-t-4">assets/css/elements/_typography.scss</em>
-        <h3 class="title title-5 mar-b-1">Typography</h3>
-        <p class="text text-s">
-          Bask's typography file contains both some default style for typography, 
-          such as headings, some classes to manipulate text and a few utility classes (text oriented).
-        </p>
-        
-        <h4 class="title title-4 mar-t-2">• Title</h4>
-        <p class="text text-s">
-          <em>.title</em> is the class which states the default title styles, it supports 6 size modifiers:              
-        </p>
-        
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">Result</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .title-1
+        <!--break-->
+        <div class="group">
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Text
+          </h4>
+          <p class="text text-m">
+            <em>.text</em> is the class which states the default text styles, it supports 6 size modifiers.
+          </p>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-xl"&gt;
             </div>
-            <div class="table__cell">
-              <p class="title-1 mar-t-0 mar-b-0">Title 1</p>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-xl">Text XL</div>
             </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .title-2
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-l"&gt;
             </div>
-            <div class="table__cell">
-              <p class="title-2 mar-t-0 mar-b-0">Title 2</p>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-l">Text L</div>
             </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .title-5
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m"&gt;
             </div>
-            <div class="table__cell">
-              <p class="title-5 mar-t-0 mar-b-0">Title 3</p>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m">Text M</div>
             </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .title-4
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-s"&gt;
             </div>
-            <div class="table__cell">
-              <p class="title-4 mar-t-0 mar-b-0">Title 4</p>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-s">Text S</div>
             </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .title-5
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-xs"&gt;
             </div>
-            <div class="table__cell">
-              <p class="title-5 mar-t-0 mar-b-0">Title 5</p>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-xs">Text XS</div>
             </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .title-6
+          </div><!--/-->
+        </div>
+        <!--break-->
+        <div class="group">
+          <h4 class="title title-5 mar-b-2 color-main font-w-600">
+            <i>•</i> Text utils
+          </h4>
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m text-center"&gt;
             </div>
-            <div class="table__cell">
-              <p class="title-6 mar-t-0 mar-b-0">Title 6</p>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m text-center">Text M - Center</div>
             </div>
-          </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m text-left"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m text-left">Text M - Left</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m text-right"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m text-right">Text M - right</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m text-uppercase"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m text-uppercase">Text M - uppercase</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m text-lowercase"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m text-lowercase">Text M - lowercase</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-900"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-900">Text M - Font weight 900</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-800"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-800">Text M - Font weight 800</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-700"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-700">Text M - Font weight 700</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-600"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-600">Text M - Font weight 600</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-500"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-500">Text M - Font weight 500</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-400"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-400">Text M - Font weight 400</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;div class="text text-m font-w-300"&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <div class="text text-m font-w-300">Text M - Font weight 300</div>
+            </div>
+          </div><!--/-->
+          <div class="grid grid-nogap text text-l">
+            <div class="col-6 pad-t-1 pad-l-1 pad-r-1 pad-b-1 bg-main color-white">
+              &lt;ul class="list"&gt; &lt;li&gt;content&lt;/li&gt;
+            </div>
+            <div class="col-6 border pad-t-1 pad-l-1 pad-r-1 pad-b-1">
+              <ul class="list">
+                <li>Styled list (UL > LI)</li>
+              </ul>
+            </div>
+          </div><!--/-->
         </div>
         
-
-        
-        <h4 class="title title-4 mar-t-2">• Text</h4>
-        <p class="text text-s">
-          <em>.text</em> is the class which states the default text styles, it supports 6 size modifiers, 
-          text centering utils and text transform utils.
-        </p>
-        
-        <div class="table w-80 text text-s color-black">
-          <div class="table__row table__row-heading">
-            <div class="table__cell bg-main color-white">Class name</div>
-            <div class="table__cell">Result</div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-xl
-            </div>
-            <div class="table__cell">
-              <p class="text-xl mar-t-0 mar-b-0">Text XL</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-l
-            </div>
-            <div class="table__cell">
-              <p class="text-l mar-t-0 mar-b-0">Text L</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s
-            </div>
-            <div class="table__cell">
-              <p class="text-s mar-t-0 mar-b-0">Text M</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s
-            </div>
-            <div class="table__cell">
-              <p class="text-s mar-t-0 mar-b-0">Text S</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-xl
-            </div>
-            <div class="table__cell">
-              <p class="text-xs mar-t-0 mar-b-0">Text XS</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s.text-center
-            </div>
-            <div class="table__cell">
-              <p class="text-s text-center d-b w-100 mar-t-0 mar-b-0">Text center</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s.text-left
-            </div>
-            <div class="table__cell">
-              <p class="text-s text-left d-b w-100 mar-t-0 mar-b-0">Text left</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s.text-right
-            </div>
-            <div class="table__cell">
-              <p class="text-s text-right d-b w-100 mar-t-0 mar-b-0">Text right</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s.text-uppercase
-            </div>
-            <div class="table__cell">
-              <p class="text-s text-uppercase mar-t-0 mar-b-0">Text uppercase</p>
-            </div>
-          </div>
-          <div class="table__row">
-            <div class="table__cell bg-main color-white">
-              .text-s.text-lowercase
-            </div>
-            <div class="table__cell">
-              <p class="text-s text-lowercase mar-t-0 mar-b-0">Text lowercase</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
-
-    <section id="docs-5" class="docs__4 mar-b-2">
-      <div id="siderend-4" class="docs__wrapper">
-
-        <em class="text text-s color-white mar-t-4">assets/css/core/_mixins.scss</em>
-        <h3 class="title title-5 mar-b-1">Mixins</h3>
-        <p class="text text-s">
-          Most of features are handled by custom mixins, such as font handling (font-size, font-weight, etc), 
-          spacing, grid generation, responsive images, etc.
-          <br>
-          I try to keep all the mixins' code clean and add comments on how they work. I work on them 
-          very often and try to enhance the boilerplate via their usage mostly. 
-        </p>            
-        
-      </div>
-    </section>
-
-  </main>
+      </section>
+  
+    </main>
+  </div>
 </body>
 
 </html>
