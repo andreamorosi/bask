@@ -17,6 +17,7 @@
   overflow: hidden;
   z-index: 1;
   appearance: none;
+  white-space: nowrap;
 
   &:hover {
     border-color: $main;
