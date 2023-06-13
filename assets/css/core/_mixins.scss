@@ -65,6 +65,7 @@
   display: grid;
   grid-template-columns: repeat(4, [col-start] minmax(auto, 1fr));
   grid-template-rows: max-content;
+  align-items: baseline;
   gap: $u*2;
   margin: 0 auto;
   padding-left: $u*2;
