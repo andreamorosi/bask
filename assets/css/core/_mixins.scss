@@ -102,7 +102,7 @@
 @mixin title {
   @include text(12.8, 16, 1.2, 700, main);
   color: inherit;
-  margin: 0;
+  margin: 0 0 $u*2;
 }
 
 // Mixin to generate padding using the $u variable

@@ -18,15 +18,12 @@
   }
   &-4 {
     @include text(20, 24.96, 1.2, 500, null);
-    margin: 0 0 $u*2;
   }
   &-5 {
     @include text(16, 20, 1.1, 400, null);
-    margin: 0 0 $u*2;
   }
   &-6 {
     @include text(12.8, 16, 1.1, 400, null);
-    margin: 0 0 $u*2;
   }
 }//end of title
 
@@ -114,21 +111,27 @@
 
 //headings
 h1 {
+  @include title;
   @extend .title-1;
 }
 h2 {
+  @include title;
   @extend .title-2;
 }
 h3 {
+  @include title;
   @extend .title-3;
 }
 h4 {
+  @include title;
   @extend .title-4;
 }
 h5 {
+  @include title;
   @extend .title-5;
 }
 h6 {
+  @include title;
   @extend .title-6;
 }//end of headings
 
