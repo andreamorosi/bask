@@ -111,28 +111,28 @@
 
 //headings
 h1 {
-  @include title;
   @extend .title-1;
+  margin: 0 0 $u*2;
 }
 h2 {
-  @include title;
   @extend .title-2;
+  margin: 0 0 $u*2;
 }
 h3 {
-  @include title;
   @extend .title-3;
+  margin: 0 0 $u*2;
 }
 h4 {
-  @include title;
   @extend .title-4;
+  margin: 0 0 $u*2;
 }
 h5 {
-  @include title;
   @extend .title-5;
+  margin: 0 0 $u*2;
 }
 h6 {
-  @include title;
   @extend .title-6;
+  margin: 0 0 $u*2;
 }//end of headings
 
 
