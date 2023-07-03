@@ -8,16 +8,16 @@
 
   //title sizes
   &-1 {
-    @include text(39.04, 48.8, 1.1, 700, null);
+    @include text(39.06, 48.83, 1.1, 700, null);
   }
   &-2 {
-    @include text(31.2, 39.04, 1.2, 700, null);
+    @include text(31.25, 39.06, 1.2, 700, null);
   }
   &-3 {
-    @include text(24.96, 31.2, 1.2, 700, null);
+    @include text(25, 31.25, 1.2, 700, null);
   }
   &-4 {
-    @include text(20, 24.96, 1.2, 500, null);
+    @include text(20, 25, 1.2, 500, null);
   }
   &-5 {
     @include text(16, 20, 1.1, 400, null);
@@ -47,7 +47,7 @@
   // type scale ratio: 1.25 (both mobile and desktop)
   // type scale baseline step: base
   &-xl {
-    @include text(20, 24.96, 1.5, 400, null);
+    @include text(20, 25, 1.5, 400, null);
   }
   &-l {
     @include text(16, 20, 1.5, 400, null);
